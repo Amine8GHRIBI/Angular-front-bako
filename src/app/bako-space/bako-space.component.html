@@ -1,0 +1,365 @@
+<app-nav-bako></app-nav-bako>
+<div class="container-fluid p-0 m-0 desktop-and-tablet">
+  <div class="row position-relative">
+    <div class="backgroundFrame p-0 d-flex align-items-top">
+      <div class="backgroundRow">
+        <img class="backgroundImage" src="../../assets/imgs/rendering/bg.png" />
+      </div>
+    </div>
+    <div class="backgroundAbsolute"></div>
+    <div class="row d-flex justify-content-center align-items-center position-absolute rowAbsolute">
+      <div class="col-12 text-center" style="margin-top:100px;">
+        <h3 class="color-white">Bako B1</h3>
+      </div>
+      <div class="col-12 d-flex justify-content-center" style="margin-top:-30px;">
+        <button (click)="openRendering()" class="sectionBtn {{rendering?'sectionActive':'sectionD'}}">360°</button>
+        <button (click)="openGallery()" class="sectionBtn {{gallery?'sectionActive':'sectionD'}}">Gallery</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid p-0 m-0 mobile-display">
+  <div class="row position-relative">
+    <div class="backgroundFrame p-0 d-flex align-items-center">
+      <div class="backgroundRow">
+        <img class="backgroundImage" src="../../assets/imgs/rendering/bg.png" />
+      </div>
+    </div>
+    <div class="row d-flex justify-content-center align-items-center position-absolute mobileRow rowAbsolute">
+      <div class="col-12 justify-content-center d-flex" style="margin-top:100px">
+        <table width="100%" style="margin-left:5vw">
+          <tr>
+            <td><h4 class="color-white" align="center">Bako B1</h4></td>
+          </tr>
+          <tr>
+          </tr>
+        </table>
+      </div>
+      <div class="col-12 d-flex justify-content-center" style="margin-top: -15px;">
+        <button (click)="openRendering()" class="sectionBtn {{rendering?'sectionActive':'sectionD'}}">360°</button>
+        <button (click)="openGallery()" class="sectionBtn {{gallery?'sectionActive':'sectionD'}}">Gallery</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container" *ngIf="rendering">
+  <!--  <div *ngIf="bDix">b10</div>-->
+  <!--  <div *ngIf="bVingt">b20</div>-->
+  <!--  <div *ngIf="bTrente">b30</div>-->
+  <div class="row mt-4">
+    <div class="col-3 desktop-and-tablet">
+      <h4 class="uppercase carac-size">CHARACTERISTICS</h4>
+      <table class="mt-4 mobile-right-align" width="100%">
+        <tr class="backgroundTitle"><td colspan="2"><h6 class="p-1">Motorization</h6></td></tr>
+        <tr>
+          <td class="weight-600">MOTOR</td>
+          <td class="value">Electric</td>
+        </tr>
+        <tr>
+          <td class="weight-600">POWER</td>
+          <td class="value">4000W</td>
+        </tr>
+        <tr>
+          <td class="weight-600">TORQUE</td>
+          <td class="value">95 N.m</td>
+        </tr>
+        <tr class="backgroundTitle"><td colspan="2"><h6 class="p-1">Version</h6></td></tr>
+        <tr>
+          <td class="weight-600">B10</td>
+          <td class="value">100 km</td>
+        </tr>
+        <tr>
+          <td class="weight-600">B15</td>
+          <td class="value">150 km</td>
+        </tr>
+        <tr>
+          <td class="weight-600">B20</td>
+          <td class="value">200 km</td>
+        </tr>
+        <tr class="backgroundTitle"><td colspan="2"><h6 class="p-1">Dimensions</h6></td></tr>
+        <tr>
+          <td class="weight-600">L/W/H (mm)</td>
+          <td class="value">3460/1760/1853</td>
+        </tr>
+        <tr class="backgroundTitle"><td colspan="2"><h6 class="p-1">Loading area</h6></td></tr>
+        <tr>
+          <td class="weight-600">SPACE</td>
+          <td class="value">2000L</td>
+        </tr>
+        <tr>
+          <td class="weight-600">LOAD CAPACITY</td>
+          <td class="value">300kg</td>
+        </tr>
+        <tr class="backgroundTitle"><td colspan="2"><h6 class="p-1">Battery</h6></td></tr>
+        <tr>
+          <td class="weight-600">TYPE</td>
+          <td class="value">Lithium<sup>(1)</sup></td>
+        </tr>
+        <tr>
+          <td class="weight-600">FULL CHARGE DURATION</td>
+          <td class="value">3h <sup>(2)</sup> , 9h</td>
+        </tr>
+        <tr class="backgroundTitle"><td colspan="2"><h6 class="p-1">Consumption</h6></td></tr>
+        <tr>
+          <td class="weight-600">CONSUMPTION COST</td>
+          <td class="value">0.5$ / 100 km</td>
+        </tr>
+        <tr>
+          <td class="weight-600">50 km/day</td>
+          <td class="value">From solar energy<sup>(3)</sup></td>
+        </tr>
+        <tr class="backgroundTitle"><td colspan="2"><h6 class="p-1">On road</h6></td></tr>
+        <tr>
+          <td class="weight-600">MAX RANGE</td>
+          <td class="value">200 km</td>
+        </tr>
+        <tr>
+          <td class="weight-600">TOP SPEED</td>
+          <td class="value">45 km/h</td>
+        </tr>
+        <tr>
+          <td class="weight-600">CO2 EMISSION</td>
+          <td class="value">0 g/km</td>
+        </tr>
+        <tr class="backgroundTitle"><td colspan="2"><h6 class="p-1">Exterior</h6></td></tr>
+        <tr>
+          <td class="weight-600" colspan="2">LED HEADLIGHTS AND TAILLIGHTS</td>
+        </tr>
+        <tr>
+          <td class="weight-600" colspan="2">ALLOW RIMS</td>
+        </tr>
+        <tr class="backgroundTitle"><td colspan="2"><h6 class="p-1">Interior</h6></td></tr>
+        <tr>
+          <td class="weight-600" colspan="2">LEATHER BENCH</td>
+        </tr>
+        <tr>
+          <td class="weight-600" colspan="2">INFOTAINMENT SYSTEM<sup>(4)</sup></td>
+        </tr>
+        <tr>
+          <td class="weight-600" colspan="2">APPLE CAR PLAY / ANDROID AUTO<sup>(4)</sup></td>
+        </tr>
+        <tr>
+          <td class="weight-600" colspan="2">GPS<sup>(4)</sup></td>
+        </tr>
+        <tr>
+          <td class="weight-600" colspan="2">REAR CAMERA<sup>(4)</sup></td>
+        </tr>
+        <br> 
+      </table>
+    
+    <div class="weight-100 pl-" ><sup>(1)</sup>Lithium battery available only on B15 and B20.
+                            The basic version is equiped with gel battery.<br><sup>(2)</sup>Fast charging.<br><sup>(3)</sup>Southern europe climate<br><sup>(4)</sup>Optional equipement</div>
+
+      <button routerLink="/order" class="discoverDesktopBtn desktop-and-tablet">PRE-ORDER</button>
+    </div>
+
+
+    <div class="margin-left-desktop col-md-6 col-xl-6 position-relative col-lg-6 col-sm-12 col-xs-12 d-flex justify-content-center flex-direction-column">
+      <!---<div class="col-12 d-flex justify-content-center">
+        <button class="colorBtn colRed position-relative"><span class="descMsg">bako seen in red</span></button>
+        <button class="colorBtn colGray position-relative"><span class="descMsg">bako seen in gray</span></button>
+        <button class="colorBtn colBlack position-relative"><span class="descMsg">bako seen in black</span></button>
+      </div>--->
+      <div class="col-12 top0 d-flex justify-content-center align-items-top">
+        <img *ngIf="left" class="animate__animated animate__flipInY heightImg" src="../../assets/imgs/rendering/left.png">
+        <img *ngIf="right" class="animate__animated animate__flipInY heightImg" src="../../assets/imgs/rendering/right.png">
+        <img *ngIf="face" style="margin-left: -35px;" class="animate__animated animate__flipInX heightImg" src="../../assets/imgs/rendering/face.png">
+        <img *ngIf="top"  class="animate__animated animate__flipInX heightImgtop heightImg" src="../../assets/imgs/rendering/top.png">
+        <img *ngIf="before" style="margin-left: -20px;" class="animate__animated animate__flipInX heightImg" src="../../assets/imgs/rendering/before.png">
+      </div>
+    </div>
+    <div class="col-md-3 col-xl-3 col-lg-3 col-sm-12 col-xs-12">
+      <div class="col-12 mb-5">
+        <h5 align="center" class="uppercase desktop-and-tablet carac-size">viewer</h5>
+      </div>
+      <div class="col-12 d-flex justify-content-center">
+        <div class="manette desktop-and-tablet position-relative">
+          <button *ngIf="top" (click)="showTop()" class="topButton selectedDirection d-flex align-items-center justify-content-center"><i
+              class="ri-arrow-up-s-line ri-lg"></i>
+            </button>
+            <button *ngIf="!top" (click)="showTop()" class="topButton d-flex align-items-center justify-content-center"><i
+              class="ri-arrow-up-s-line ri-lg"></i>
+            </button>
+          <button *ngIf="right" (click)="showRight()" class="rightButton selectedDirection d-flex align-items-center justify-content-center"><i
+              class="ri-arrow-right-s-line ri-lg"></i>
+            </button>
+            <button *ngIf="!right" (click)="showRight()" class="rightButton d-flex align-items-center justify-content-center"><i
+              class="ri-arrow-right-s-line ri-lg"></i>
+            </button>
+          <button *ngIf="before" (click)="showBefore()" class="bottomButton selectedDirection d-flex align-items-center justify-content-center"><i
+              class="ri-arrow-down-s-line ri-lg"></i>
+            </button>
+            <button *ngIf="!before" (click)="showBefore()" class="bottomButton d-flex align-items-center justify-content-center"><i
+              class="ri-arrow-down-s-line ri-lg"></i>
+            </button>
+          <button *ngIf="left" (click)="showLeft()" class="leftButton d-flex align-items-center selectedDirection justify-content-center"><i
+              class="ri-arrow-left-s-line ri-lg"></i>
+            </button>
+            <button *ngIf="!left" (click)="showLeft()" class="leftButton d-flex align-items-center justify-content-center"><i
+              class="ri-arrow-left-s-line ri-lg"></i>
+            </button>
+          <button *ngIf="face" (click)="showFace()" class="centerButton selector centerSelected d-flex align-items-center justify-content-center">A</button>
+          <button *ngIf="!face" (click)="showFace()" class="centerButton selector d-flex align-items-center justify-content-center">A</button>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-display">
+    <div class="container p-0" style="margin-top:210px">
+      <div class="row">
+        <div class="col-12 p-0">
+          <h4 class="uppercase carac-size" align="center">CHARACTERISTICS</h4>
+          <table class="mt-4 mobile-right-align" width="100%">
+            <tr class="backgroundTitle"><td colspan="2"><h6 align="center" class="p-1">Motorization</h6></td></tr>
+            <tr>
+              <td class="weight-600 pl-25">MOTOR</td>
+              <td class="value">Electric</td>
+            </tr>
+            <tr>
+              <td class="weight-600 pl-25">POWER</td>
+              <td class="value">4000W</td>
+            </tr>
+            <tr>
+              <td class="weight-600 pl-25">TORQUE</td>
+              <td class="value">95 N.m</td>
+            </tr>
+            <tr class="backgroundTitle"><td colspan="2"><h6 align="center" class="p-1">Version</h6></td></tr>
+            <tr>
+              <td class="weight-600 pl-25">B10</td>
+              <td class="value">100 km</td>
+            </tr>
+            <tr>
+              <td class="weight-600 pl-25">B15</td>
+              <td class="value">150 km</td>
+            </tr>
+            <tr>
+              <td class="weight-600 pl-25">B20</td>
+              <td class="value">200 km</td>
+            </tr>
+            <tr class="backgroundTitle"><td colspan="2"><h6 align="center" class="p-1">Dimensions</h6></td></tr>
+            <tr>
+              <td class="weight-600 pl-25">L/W/H (mm)</td>
+              <td class="value">3460/1760/1853</td>
+            </tr>
+            <tr class="backgroundTitle"><td colspan="2"><h6 align="center" class="p-1">Loading area</h6></td></tr>
+            <tr>
+              <td class="weight-600 pl-25">SPACE</td>
+              <td class="value">2000L</td>
+            </tr>
+            <tr>
+              <td class="weight-600 pl-25">LOAD CAPACITY</td>
+              <td class="value">300kg</td>
+            </tr>
+            <tr class="backgroundTitle"><td colspan="2"><h6 align="center" class="p-1">Battery</h6></td></tr>
+            <tr>
+              <td class="weight-600 pl-25">TYPE</td>
+              <td class="value">Lithium<sup>(1)</sup></td>
+            </tr>
+            <tr>
+              <td class="weight-600 pl-25">FULL CHARGE DURATION</td>
+              <td class="value">3h <sup>(2)</sup> , 9h</td>
+            </tr>
+            <tr class="backgroundTitle"><td colspan="2"><h6 align="center" class="p-1">Consumption</h6></td></tr>
+            <tr>
+              <td class="weight-600 pl-25">CONSUMPTION COST</td>
+              <td class="value">0.5$ / 100 km</td>
+            </tr>
+            <tr>
+              <td class="weight-600 pl-25">50 km/day</td>
+              <td class="value">From solar energy<sup>(3)</sup></td>
+            </tr>
+            <tr class="backgroundTitle"><td colspan="2"><h6 align="center" class="p-1">On road</h6></td></tr>
+            <tr>
+              <td class="weight-600 pl-25">MAX RANGE</td>
+              <td class="value">200 km</td>
+            </tr>
+            <tr>
+              <td class="weight-600 pl-25">TOP SPEED</td>
+              <td class="value">45 km/h</td>
+            </tr>
+            <tr>
+              <td class="weight-600 pl-25">CO2 EMISSION</td>
+              <td class="value">0 g/km</td>
+            </tr>
+            <tr class="backgroundTitle"><td colspan="2"><h6 align="center" class="p-1">Exterior</h6></td></tr>
+            <tr>
+              <td class="weight-600 pl-25" colspan="2">LED HEADLIGHTS AND TAILLIGHTS</td>
+            </tr>
+            <tr>
+              <td class="weight-600 pl-25" colspan="2">ALLOW RIMS</td>
+            </tr>
+            <tr class="backgroundTitle"><td colspan="2"><h6 align="center" class="p-1">Interior</h6></td></tr>
+            <tr>
+              <td class="weight-600 pl-25" colspan="2">LEATHER BENCH</td>
+            </tr>
+            <tr>
+              <td class="weight-600 pl-25" colspan="2">INFOTAINMENT SYSTEM<sup>(4)</sup></td>
+            </tr>
+            <tr>
+              <td class="weight-600 pl-25" colspan="2">APPLE CAR PLAY / ANDROID AUTO<sup>(4)</sup></td>
+            </tr>
+            <tr>
+              <td class="weight-600 pl-25" colspan="2">GPS<sup>(4)</sup></td>
+            </tr>
+            <tr>
+              <td class="weight-600 pl-25" colspan="2">REAR CAMERA<sup>(4)</sup></td>
+            </tr>
+            <br> 
+          </table>
+          <div class="weight-100 pl-25" ><sup>(1)</sup>Lithium battery available only on B15 and B20.
+            The basic version is equiped with gel battery.<br><sup>(2)</sup>Fast charging.<br><sup>(3)</sup>Southern europe climate<br><sup>(4)</sup>Optional equipement</div>
+
+<button routerLink="/order" class="discoverDesktopBtn desktop-and-tablet">PRE-ORDER</button>
+</div>
+      </div>
+      
+    </div>
+    <div class="navbar viewNav fixed-bottom">
+      <div class="container d-flex justify-content-center">
+        <div class="row width-100">
+          <div>
+            <h6 align="center">VIEWER</h6>
+          </div>
+        </div>
+      </div>
+      <ul class="nav width-100 justify-content-center">
+        <button *ngIf="left" (click)="showLeft()" class="viewButton selectedDirection d-flex align-items-center justify-content-center"><i class="ri-arrow-left-s-line ri-lg"></i></button>
+        <button *ngIf="!left" (click)="showLeft()" class="viewButton d-flex align-items-center justify-content-center"><i class="ri-arrow-left-s-line ri-lg"></i></button>
+        <button *ngIf="top" (click)="showTop()" class="viewButton selectedDirection d-flex align-items-center justify-content-center"><i class="ri-arrow-up-s-line ri-lg"></i></button>
+        <button *ngIf="!top" (click)="showTop()" class="viewButton d-flex align-items-center justify-content-center"><i class="ri-arrow-up-s-line ri-lg"></i></button>
+        <button *ngIf="!face" (click)="showFace()" class="viewButton selector d-flex align-items-center justify-content-center">A</button>
+        <button *ngIf="face" (click)="showFace()" class="viewButton centerSelected selector d-flex align-items-center justify-content-center">A</button>
+        <button *ngIf="!before" (click)="showBefore()" class="viewButton d-flex align-items-center justify-content-center"><i class="ri-arrow-down-s-line ri-lg"></i></button>
+        <button *ngIf="before" (click)="showBefore()" class="viewButton selectedDirection d-flex align-items-center justify-content-center"><i class="ri-arrow-down-s-line ri-lg"></i></button>
+        <button *ngIf="!right" (click)="showRight()" class="viewButton d-flex align-items-center justify-content-center"><i class="ri-arrow-right-s-line ri-lg"></i></button>
+        <button *ngIf="right" (click)="showRight()" class="viewButton selectedDirection d-flex align-items-center justify-content-center"><i class="ri-arrow-right-s-line ri-lg"></i></button>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container" *ngIf="gallery">
+  <h3 align="center" class="mt-4">Bako's Gallery</h3>
+  <div class="row post-list-row mt-4 d-flex justify-content-center animate__animated animate__fadeIn">
+    <div class="column">
+    <img src="../../assets/imgs/gallery/10.png" class="width-100">
+    <img src="../../assets/imgs/gallery/40.png" class="width-100">
+    <img src="../../assets/imgs/gallery/70.png" class="width-100">
+    </div>
+    <div class="column">
+    <img src="../../assets/imgs/gallery/20.png" class="width-100">
+    <img src="../../assets/imgs/gallery/50.png" class="width-100">
+    <img src="../../assets/imgs/gallery/80.png" class="width-100">
+    </div>
+    <div class="column">
+    <img src="../../assets/imgs/gallery/30.png" class="width-100">
+    <img src="../../assets/imgs/gallery/60.png" class="width-100">
+    <img src="../../assets/imgs/gallery/90.png" class="width-100">
+    </div>
+  </div>
+</div>
+<footer class="backgroundGris footerMonte">
+  <app-footer></app-footer>
+</footer>

@@ -1,0 +1,122 @@
+<app-navbar></app-navbar>
+<div class="container p-0 height-after">
+  <mat-card class="matCardRequest mt-4">
+    <div class="row">
+      <div class="col-md-6 col-xl-6 col-lg-6 col-sm-12 col-xs-12">
+        <h5 class="mt-4 uppercase" align="center">frequently asked questions</h5>
+        <div class="col-12 mt-3 d-flex justify-content-center"><div class="lineForm"></div></div>
+        <div class="col-12 mt-5 d-flex justify-content-center">
+          <div class="accordion accordion-flush" style="width:80%;" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  What is BAKO Motors?
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Bako Motors is the first company in the MEA region developing and manufacturing electrical vehicles powered by sun.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  What is the B1?
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">B1 is a 3-wheeler vehicle that addresses the logistics challenges of the last-mile delivery issue and its high operations costs.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  How can I order the B1?
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  You can reserve your BAKO B1 directly on our website or on Jumia’s website (Hyperlink) . Simply select your vehicle B10, B15 or B20, and enter your personal data. An email will be sent to you to confirm your pre-order. Then, you will be directed to pay the voucher of 200 TND (for the B10), 250 TND (for the B15), or 300 TND ( for the B20) . You have the option to pay online or once you receive your voucher.
+                  Your reservation is a purchase option and therefore not binding. This means that you will have the option to either sign the purchase agreement and purchase the B1, or have your deposit refunded before delivery begins.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-heading4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapse4">
+                  What is the price of B1?
+                </button>
+              </h2>
+              <div id="flush-collapse4" class="accordion-collapse collapse" aria-labelledby="flush-heading4" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  The B10 costs 4000 $ excluding VAT<br>
+                  The B15 costs 5000 $ excluding VAT<br>
+                  The B20 costs 6000 $ excluding VAT<br>
+                  You can order your vehicule with Jumia under following link:<br><br>
+                  <a class="preorderJumia" target="_blank" href="https://www.jumia.com.tn/catalog/?q=bako">Pre Order via Jumia</a>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-heading5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">
+                  Does the vehicle have doors or not?
+                </button>
+              </h2>
+              <div id="flush-collapse5" class="accordion-collapse collapse" aria-labelledby="flush-heading5" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Doors will be present in the next prototypes and in the serial production.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-heading6">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapse6">
+                  What is the autonomy of B1?
+                </button>
+              </h2>
+              <div id="flush-collapse6" class="accordion-collapse collapse" aria-labelledby="flush-heading6" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  B1 is divided into; B10, B15, and B20, and the price varies respectively with the range of the battery 100Km, 150Km, 200Km
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-6 col-xl-6 col-lg-6 col-sm-12 col-xs-12">
+        <h5 class="mt-4 uppercase" align="center">ask a new question</h5>
+        <div class="col-12 mt-3 d-flex justify-content-center"><div class="lineForm"></div></div>
+        <form *ngIf="questionForm" class="mt-3">
+          <div class="col-12 d-flex justify-content-center">
+            <input class="faqInput" type="text" placeholder="Your name...">
+          </div>
+          <div class="col-12 d-flex justify-content-center">
+            <input class="faqInput" type="email" placeholder="Enter your email...">
+          </div>
+          <div class="col-12 d-flex justify-content-center">
+            <textarea class="commentArea" placeholder="Enter your question..."></textarea>
+          </div>
+          <div class="col-12 d-flex justify-content-center">
+            <button (click)="sendQuestion()" class="sendBtn hvr-hang d-flex align-items-center justify-content-center"><i class="ri-send-plane-fill ri-lg"></i>&nbsp;&nbsp;Send</button>
+          </div>
+        </form>
+        <div *ngIf="!questionForm" class="width-100 heightAnimated d-flex align-items-center">
+          <div class="width-100">
+            <div class="col-12 contentAnimate d-flex justify-content-center">
+              <img class="animatedIcon" src="../../assets/imgs/icons/confetti.gif" alt="Computer man">
+            </div>
+            <div class="col-12 mb-4 text-center mt-5">
+              <h4 align="center">Your question send successfuly !</h4>
+              <font class="text-center" color="white" style="opacity:0.8">We will get back to you shortly</font>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+</div>
+<footer>
+  <app-footer></app-footer>
+</footer>

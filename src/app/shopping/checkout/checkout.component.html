@@ -1,0 +1,177 @@
+
+<!--
+<div class="content">
+  <mat-card>
+    <mat-card-content>
+      <div class="label">Checkout</div>
+      <div class="empty-cart" *ngIf="cartData.orderProducts?.length === 0">
+        <div>Your cart is empty. To add some products click here:
+          <button mat-raised-button routerLink="/menu">Add to cart</button>
+        </div>
+      </div>
+      <div *ngIf="cartData.orderProducts?.length! > 0">
+      <table mat-table [dataSource]="cartData.orderProducts!" class="mat-elevation">
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Product Name </th>
+          <td mat-cell *matCellDef="let element"> 
+            <div class="large-text">{{element.product.name}}</div>
+                <span  class="ingredients-list" *ngFor="let ingredient of element.product.ingredients let last = last">
+              &nbsp; {{ingredient.name}}{{last? '': ','}}
+            </span>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="usermail">
+          <th mat-header-cell *matHeaderCellDef> usermail</th>
+            <td mat-cell *matCellDef="let element"><div class="large-text">{{usermail}}</div></td>
+            </ng-container>
+        <ng-container matColumnDef="quantity">
+        <th mat-header-cell *matHeaderCellDef> Quantity</th>
+          <td mat-cell *matCellDef="let element"><div class="large-text">{{element.quantity}}</div></td>
+          </ng-container>
+        <ng-container matColumnDef="price">
+          <th mat-header-cell *matHeaderCellDef> Price </th>
+          <td mat-cell *matCellDef="let element"><div class="large-text">{{element.product.price | currency : 'TND'}}</div></td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <div fxLayout="row" fxLayoutAlign="space-between center">
+        <div fxLayout="row" fxLayoutAlign="space-between center" class="summary">
+          <div class ="totalPrice-text">TOTAL: </div>
+          <div class ="totalPrice-text">{{cartData.totalPrice | currency : 'TND'}}</div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+          <button mat-raised-button (click)="placeOrder()">Place Order</button>
+          <button mat-raised-button routerLink="/menu">Edit cart</button>
+        </div>
+      </div>
+      </div>
+    </mat-card-content>
+</mat-card>
+</div>
+
+-->
+
+<body>
+  <h3 class="text-center p-3">Checkout</h3>
+  <div class="container mb-4">
+      <div class="row pt-2 pb-4">
+          <div class="col-lg-8">
+              <form action="#">
+                  <div class="row pt-4">
+                      <div class="col-lg-6 pl-0">
+
+
+                          <div class="form-group">
+
+                              <input type="text" class="form-control" placeholder="Enter name" required>
+                          </div>
+                          <div class="form-group">
+
+                              <input type="email" class="form-control" placeholder="Enter email" required>
+                          </div>
+
+                          <div class="form-group">
+
+                              <textarea class="form-control" rows="5" placeholder="Enter Address" id="Address"
+                                  required></textarea>
+                          </div>
+                          <div class="form-group">
+
+                              <input type="text" class="form-control" placeholder="Enter city" required>
+                          </div>
+                          <div class="row">
+                              <div class="col-lg-6 pl-0">
+                                  <div class="form-group">
+
+                                      <input type="text" class="form-control" placeholder="Enter State" required>
+                                  </div>
+                              </div>
+                              <div class="col-lg-6 pr-0 mob-pl-0">
+                                  <div class="form-group">
+
+                                      <input type="number" class="form-control" placeholder="Enter Zip" required>
+                                  </div>
+                              </div>
+                          </div>
+
+
+                      </div>
+                      <div class="col-lg-6 mob-pl-0">
+                        <div class="form-group">
+                          <input type="text" disabled class="disabled"  class="form-control"  placeholder="Enter Name of card" required>
+                          </div>
+                          <div class="form-group">
+
+                              <input type="number" disabled class="disabled" class="form-control" placeholder="Enter Card number" required>
+                          </div>
+                          <div class="row">
+                              <div class="col-lg-6 pl-0">
+                                  <div class="form-group">
+
+                                      <input type="text" disabled class="disabled" class="form-control" placeholder="01/95" required>
+                                  </div>
+                              </div>
+                              <div class="col-lg-6 pr-0 mob-pl-0">
+                                  <div class="form-group">
+
+                                      <input type="number" disabled class="disabled" class="form-control" placeholder="Enter Cvv" irequired>
+                                  </div>
+                              </div>
+                              <div class="col-md-12 p-0 text-center">
+                                  <p class="mb-1 pb-2">Accepted Cards</p>
+                                  <img src="../../assets/payment.png" class="w-100">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  </form>
+          </div>
+          <div class="col-lg-4 pt-1" *ngFor="let item of cartData.orderProducts">
+              <div class="row pt-4">
+                  <div class="col-8">
+                      <h3 class="mb-0 pb-2">Cart</h3>
+                  </div>
+                  <div class="col-4">
+                      <h3 class="mb-0 pb-2">{{ item.quantity }}</h3>
+                  </div>
+              </div>
+              <div class="row  pt-2">
+                  <div class="col-8">
+
+                      <h5 class="pb-2">{{ item.product?.name }}</h5>
+                     
+
+                  </div>
+                  <div class="col-4">
+
+                      <h5 class="pb-2">{{ item.product?.price }}</h5>
+                     
+                  </div>
+              </div>
+              <div class="row border-top  border-dark">
+                  <div class="col-8">
+                      <h5 class="pt-2">Total</h5>
+                  </div>
+                  <div class="col-4">
+                      <h5 class="pt-2">{{cartData.totalPrice | currency : 'TND'}}</h5>
+                  </div>
+              </div>
+              <div class="row pb-5 pt-4">
+                  <div class="col-12">
+                      <div class="form-group form-check">
+                          <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox"> Shipping address same as
+                              billing
+                          </label>
+                      </div>
+                      <button type="submit" disabled class="btn btn-primary w-100">Complate Payment (Coming Soon)</button>
+                      <button  class="btn btn-primary w-100" (click)="sendcommand()">Pre-order </button>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+
+  </div>
+</body>

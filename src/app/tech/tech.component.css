@@ -1,0 +1,106 @@
+
+body {
+  height: 1400px;
+  margin: 0 auto;
+}
+
+.positionAnimation {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    min-height:calc(90vh - 0px);
+    max-height:calc(90vh - 0px);
+    overflow-x:hidden;
+    overflow-y:hidden;
+    border-radius:0;
+}
+
+.stickyFrame{
+position:relatif;
+min-height:calc(90vh - 0px);
+max-height:calc(90vh - 0px);
+width:auto;
+overflow-y:auto;
+overflow-x:hidden;
+}
+
+.stickyRow{
+width:100%;
+height:auto;
+}
+
+.textHover{
+position:absolute;
+top:0;
+left:0;
+height:80vh;
+width:100%;
+color:white;
+text-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+font-weight:400;
+font-size:50px;
+z-index: 99;
+}
+
+
+font{
+cursor:pointer;
+}
+
+.animationRow{
+height:auto;
+width:100%;
+}
+
+
+.arrow-direction{
+margin-top:50vh;
+color:white;
+width:100%;
+}
+
+.arrowAnimation{
+animation: mymove 2s infinite;
+}
+
+
+
+@keyframes mymove {
+  0% {margin-top: 0px;}
+  20% {margin-top: 20px;}
+  50% {margin-top: 0px;}
+  100% {margin-top: 0px;}
+}
+
+@media screen and (max-width:767px) {
+  .stickyFrame::-webkit-scrollbar {
+    width: 0px !important;
+  }
+
+  .backgroundFlou{
+    filter:blur(2rem);
+    height:80vh;
+    min-width:100vw;
+    position: absolute;
+    top:0;
+    }
+
+  .mobileDesignForImage{
+    position: absolute;
+    z-index: 1;
+    top:24vh;
+  }
+
+  .hvr-grow{
+    font-size: 45px;
+  }
+
+  .positionAnimation{
+    min-height:calc(80vh - 0px);
+    max-height:calc(80vh - 0px);
+  }
+  
+}

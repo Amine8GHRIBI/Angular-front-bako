@@ -1,0 +1,166 @@
+<app-nav-order></app-nav-order>
+<div class=" p-0 height-after"  *ngFor="let items of dataSource">
+  
+  <mat-card class=" p-1 ">
+    <div class="row">
+      <div class="col-md-8 col-xl-8 col-lg-6 col-sm-12 col-xs-12 p-0 desktop-and-tablet">
+<!--        <div class="row mt-4">-->
+<!--          <div class="col-12">-->
+<!--            <h6 align="center" style="opacity:0.9">Choose your Bako model</h6>-->
+<!--          </div>-->
+<!--        </div>-->
+        <div class="preorderFrame">
+          <div class="preorderFrameRow">
+            <ngb-carousel *ngIf="images">
+              <ng-template ngbSlide>
+                <div class="wrapper">
+                  <img [src]="images[0]" alt="Random first slide">
+                </div>
+                
+              </ng-template>
+              <ng-template ngbSlide>
+                <div class="wrapper">
+                  <img [src]="images[1]" alt="Random second slide">
+                </div>
+                
+              </ng-template>
+              <ng-template ngbSlide>
+                <div class="wrapper">
+                  <img [src]="images[2]"  alt="Random third slide">
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+              <div class="wrapper">
+                <img [src]="images[3]"  alt="Random third slide">
+              </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="wrapper">
+              <img [src]="images[4]"  alt="Random third slide">
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+          <div class="wrapper">
+            <img [src]="images[5]"  alt="Random third slide">
+          </div>
+      </ng-template>
+      
+            </ngb-carousel>
+                    </div>
+        </div>
+      </div>
+
+    <div class="col-md-4 p-0 col-xl-4 col-lg-12 col-sm-12 col-xs-5">
+
+      <div class="row ">
+        <div class="col-12">
+          <h6 align="center" style="opacity:0.9">Configure</h6>
+       </div>
+       </div>
+      <div class="basic-container">
+        <mat-accordion displayMode="flat" multi class="mat-table">
+          <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+            <div class="sample-holder">
+
+              <igx-expansion-panel class="my-expansion-panel" *cdkVirtualFor="let item of items.configs">
+                <igx-expansion-panel-header [iconPosition]="'right'">
+                    <igx-expansion-panel-title>
+                        {{item.title}}
+                    </igx-expansion-panel-title>
+                    <igx-expansion-panel-description>
+                        {{item.subtitle}}
+                    </igx-expansion-panel-description>
+                </igx-expansion-panel-header>
+                   <igx-expansion-panel-body>
+                    
+<ul class="heroes">
+  <li *ngFor="let data of item.types">
+     <mat-panel-description>
+                    <div style="position:absolute; padding : 1em;right:0; margin-right: 10px;background-color: transparent;">
+                      <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+                        <mat-icon>more_vert</mat-icon>
+                      </button>
+                    </div>
+     </mat-panel-description>
+
+    <button *ngIf="item.title === 'Performance'" class = "buttonitem" [class.selected]="data === selectedbatt" type="button" (click)="onSelectbatt(data,items)">
+      <span class="badge">{{data.price }}</span>
+      <span class="name">{{data.description}}</span>
+    </button>
+    <button *ngIf="item.title === 'Cargo space'" class = "buttonitem" [class.selected]="data === selectedCargo" type="button" (click)="OnSelectcargo(data,items)">
+      <span class="badge">{{data.price}}</span>
+      <span class="name">{{data.description}}</span>
+    </button>
+    <button *ngIf="item.title === 'Cockpit'" class = "buttonitem" [class.selected]="data === selectedCockpit" type="button" (click)="OnSelectCockpit(data,items)">
+      <span class="badge">{{data.price }}</span>
+      <span class="name">{{data.description}}</span>
+    </button>
+    <button *ngIf="item.title === 'Additional'" class = "buttonitem" [class.selected]="data === selectedAdditional" type="button" (click)="OnSelectAdditional(data,items)">
+      <span class="badge">{{data.price }}</span>
+      <span class="name">{{data.description}}</span>
+    </button>
+    </li>
+     </ul>
+            </igx-expansion-panel-body>
+            </igx-expansion-panel>
+            </div>
+          </cdk-virtual-scroll-viewport>
+      </mat-accordion>
+      </div> </div>
+    </div>
+  </mat-card>
+  <mat-card >
+    
+    <div class="row">
+    <div class="table-responsive col-xs-7 col-sm-8">          
+      <table class="table">
+        <thead>
+          <tr>
+            <th>SPEED</th>
+            <th>CHARGING TIME </th>
+            <th>ENERGY USAGE</th>
+            <th>RANGE</th>
+            <th>Model</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td *ngIf="selectedbatt && selectedbatt.price == 0" >50 KM/H</td>
+            <td *ngIf="selectedbatt && selectedbatt.price == 0">4HRS</td>
+            <td *ngIf="selectedbatt && selectedbatt.price == 0">2.5kWh/100km</td>
+            <td *ngIf="selectedbatt && selectedbatt.price == 0">100 KM</td>
+            <td *ngIf="selectedbatt && selectedbatt.price == 0">B 10</td>
+            <td *ngIf="selectedbatt && selectedbatt.price === 3000" >50 KM/H</td>
+            <td *ngIf="selectedbatt && selectedbatt.price === 3000">6HRS</td>
+            <td *ngIf="selectedbatt && selectedbatt.price === 3000 ">5kWh/150km</td>
+            <td *ngIf="selectedbatt && selectedbatt.price === 3000 ">150 KM</td>
+            <td *ngIf="selectedbatt && selectedbatt.price === 3000 ">B 15</td>
+            <td *ngIf="selectedbatt && selectedbatt.price === 6000" >50 KM/H</td>
+            <td *ngIf="selectedbatt && selectedbatt.price === 6000">8HRS</td>
+            <td *ngIf="selectedbatt && selectedbatt.price === 6000">7.5kWh/200km</td>
+            <td *ngIf="selectedbatt && selectedbatt.price === 6000">200 KM</td>
+            <td *ngIf="selectedbatt && selectedbatt.price === 6000">B 20</td>
+           </tr>
+        </tbody>
+      </table>
+      </div>
+    <div  class="col-sm-4 col-xs-5">
+      <div id="bloc2">
+        <div class="col-xs-6 center" > 
+          <div class="buttons d-flex flex-row"> 
+          <div class="cart" (click)="openCartDialog()" matBadge="{{cartData.quantityOfItems}}" matBadgePosition="after">
+          <mat-icon style="color: rgb(247, 174, 66)">shopping_cart</mat-icon>
+        </div> 
+          <button  (click)="addToCart(items)" class="btn  cart-button px-5">
+          Add to cart </button> 
+        </div> 
+        </div> 
+       </div>
+      </div>
+    </div>
+ </mat-card>
+  
+</div>
+<footer class="backgroundGris footerMonte">
+  <app-footer></app-footer>
+</footer>

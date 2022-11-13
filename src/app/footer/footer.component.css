@@ -1,0 +1,71 @@
+
+/******************FOOTER******************/
+
+.footerValue{
+border:0;
+background:0;
+color: #206495 !important;
+outline:none;
+text-align:left;
+font-size:13px;
+}
+
+.footerMedia{
+height:50px;
+width:50px;
+border:0;
+background:#ecf0f1;
+color:black;
+text-decoration:none;
+border-radius:50%;
+outline:none;
+margin-right:15px;
+}
+
+.footerSend{
+height:auto;
+width:45px;
+border:0;
+background:none;
+color:black;
+border-radius:50%;
+outline:none;
+margin-left:-40px;
+margin-top:-5px;
+}
+
+.footerSubtitle{
+font-weight:500;
+}
+
+.footerInputStyle{
+border:0;
+width:100%;
+height:50px;
+border-bottom:3px solid black !important;
+outline:none;
+}
+
+@media screen and (max-width:767px){
+  .footerMtMobile{
+  margin-top:15px;
+  }
+}
+
+.privacy{
+margin-left:15px;
+cursor:pointer;
+}
+.privacy:hover{
+text-decoration:underline;
+margin-left:15px;
+}
+
+.margin-bottom20{
+  margin-bottom:15px;
+}
+
+.backgroundGris{
+  background: #dcdbdf;
+  color: #206495 !important;
+}

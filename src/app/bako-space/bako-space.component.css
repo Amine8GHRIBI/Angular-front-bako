@@ -1,0 +1,396 @@
+
+
+.rowAbsolute{
+top:0;
+left:0;
+height:40vh;
+z-index:99;
+}
+
+.outline{
+border:2px solid black !important;
+}
+
+.discoverBtn{
+background:black;
+outline:none;
+border:0;
+color:white;
+border-radius:3px;
+padding:4px 10px 4px 10px;
+}
+
+.mbDiscoverBtn{
+background:white;
+outline:none;
+border:0;
+color:black;
+font-weight:500;
+font-size:12px;
+padding:7px 20px 7px 20px;
+border-radius:30px;
+margin-left:10px;
+}
+
+.mobileRow{
+background:rgba(0, 0, 0, 0.5);
+}
+
+.cardLink{
+cursor:pointer;
+border-radius:10px;
+}
+
+.discoverDesktopBtn{
+font-size:15px;
+border:0;
+outline:none;
+color:white;
+padding:10px 35px 10px 35px;
+border-radius:35px;
+width:200px;
+background:black;
+font-weight:500;
+margin-top:50px;
+}
+
+.opacity-5{
+opacity:0.8;
+}
+
+.value{
+opacity:0.8;
+}
+
+.manette{
+height:150px;
+width:150px;
+border:2px solid #ecf0f1;
+border-radius:50%;
+}
+
+.topButton{
+background:black;
+color:white;
+height:44px;
+width:44px;
+top:-22px;
+position:absolute;
+border:0;
+border-radius:50%;
+left:53px;
+}
+
+.rightButton{
+background:black;
+color:white;
+height:44px;
+width:44px;
+right:-22px;
+position:absolute;
+border:0;
+border-radius:50%;
+top:53px;
+}
+
+.bottomButton{
+background:black;
+color:white;
+height:44px;
+width:44px;
+bottom:-22px;
+position:absolute;
+border:0;
+border-radius:50%;
+left:53px;
+}
+
+.leftButton{
+background:black;
+color:white;
+height:44px;
+width:44px;
+left:-22px;
+position:absolute;
+border:0;
+border-radius:50%;
+top:53px;
+}
+
+.centerButton{
+background:black;
+color:white;
+height:44px;
+width:44px;
+left:53px;
+position:absolute;
+border:0;
+border-radius:50%;
+top:53px;
+}
+
+.selector{
+background:#e96230 !important;
+}
+
+.mbNavigation{
+position:fixed;
+z-index:99;
+top:70vh;
+height:200px;
+width:200px;
+border-radius:50%;
+background:white;
+box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+}
+
+.colorBtn{
+border:0;
+height:15px;
+width:15px;
+border-radius:50%;
+margin-right:10px;
+}
+
+.colRed{
+background:#e74c3c;
+}
+.colGray{
+background:#7f8c8d;
+}
+.colBlack{
+background:black;
+}
+
+table{
+font-size:13px;
+}
+
+
+
+.descMsg{
+visibility: hidden;
+width: 180px;
+background-color: white;
+color: black;
+text-align: center;
+border-radius: 6px;
+padding: 5px 4px;
+position: absolute;
+z-index: 1;
+bottom: 105%;
+left: 50%;
+margin-left: -90px;
+box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+}
+
+.descMsg::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+}
+
+button:hover .descMsg{
+visibility:visible;
+}
+
+.viewButton{
+height:40px;
+width:40px;
+background:black;
+border-radius:50%;
+color:white;
+border:0;
+outline:none;
+margin-right:10px;
+}
+
+.viewNav{
+background:white;
+border-top:1px solid #ecf0f1;
+}
+
+.lineBorder{
+background: whitesmoke;
+}
+
+footer{
+border-top:1px solid #ecf0f1;
+margin-top:40px;
+}
+
+.backgroundAbsolute{
+height:40vh;
+position:absolute;
+z-index:2;
+background-image: linear-gradient(to right top, #1575b7, #0d5a8c, #0b4164, #09283e, #02111c);
+opacity:0.4;
+}
+
+.selectedDirection{
+  border:2px solid #8a8a8a;
+}
+
+.centerSelected{
+  border:3px solid #7f8c8d;
+}
+
+@media screen and (max-width:767px) {
+  .discoverDesktopBtn{
+    width: 88vw;
+  }
+  .backgroundFrame{
+  width:100%;
+  min-height:calc(40vh - 0px);
+  max-height:calc(40vh - 0px);
+  overflow-x:hidden;
+  overflow-y:hidden;
+  }
+  .heightImg{
+    height:25vh !important;
+  }
+
+  .heightImgtop{
+    height:25vh !important;
+    width:87%;
+    margin-left: 20%px;
+  }
+  
+  .backgroundRow{
+  width:100%;
+  height:auto;
+  }
+  
+  .backgroundImage{
+  width:100vw;
+  height: auto;
+  margin-left:10px;
+  }
+  .pl-25{
+    padding-left: 25px !important;
+  }
+  .discoverDesktopBtn{
+    margin-left:6vw;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width:1024px) {
+  .backgroundFrame{
+    width:100%;
+    min-height:calc(40vh - 0px);
+    max-height:calc(40vh - 0px);
+    overflow-x:hidden;
+    overflow-y:hidden;
+    }
+    
+    .backgroundRow{
+    width:100%;
+    height:auto;
+    }
+    
+    .backgroundImage{
+    width:100vw;
+    height:auto;
+    margin-top:-300px;
+    }
+ }
+ 
+ @media screen and (min-width: 1025px) {
+  .backgroundFrame{
+    width:100%;
+    min-height:calc(40vh - 0px);
+    max-height:calc(40vh - 0px);
+    overflow-x:hidden;
+    overflow-y:hidden;
+    }
+    
+    .backgroundRow{
+    width:100%;
+    height:auto;
+    }
+    
+    .backgroundImage{
+    width:100vw;
+    height:auto;
+    margin-top:-300px;
+    }
+ }
+
+.sectionBtn{
+  background: white;
+  border-radius:3px;
+  border:0;
+  outline: none;
+  color: black;
+  font-size:13px;
+  padding:8px 30px 8px 30px;
+  font-weight:500;
+  margin-left:10px;
+  margin-right:10px;
+}
+
+.backgroundGris{
+  background: #dcdbdf;
+  padding-top:40px;
+}
+
+.galleryViewer{
+width:100%;
+min-height:calc(40vh - 0px);
+max-height:calc(40vh - 0px);
+overflow-x:hidden;
+overflow-y:hidden;
+border-radius:3px;
+}
+
+.galleryViewerRow{
+width:100%;
+height:auto;
+}
+
+.imageView{
+  width: 100%;
+  height: auto;
+}
+
+
+/* Create four equal columns that sits next to each other */
+.column {
+-ms-flex: 33.33%; /* IE10 */
+flex: 33.33%;
+max-width: 33.33%;
+padding: 0 4px;
+}
+
+.column img {
+vertical-align: middle;
+width: 100%;
+margin-top:8px;
+}
+
+.sectionActive{
+  border:2px solid black;
+}
+
+.backgroundTitle{
+  background-image: linear-gradient(to left, rgba(172, 172, 172, 0), rgb(172, 172, 172));
+}
+
+.top0{
+  position: absolute;
+  top: 0;
+}
+
+.heightImg{
+  height:40vh;
+  margin-top:50px;
+}

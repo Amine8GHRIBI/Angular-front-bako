@@ -1,0 +1,111 @@
+.faqInput{
+border:2px solid white;
+background:none;
+border-radius:30px;
+height:45px;
+padding-left:15px;
+outline:none;
+width:85%;
+color:white;
+font-size:15px;
+margin-top:20px;
+}
+
+.faqInput::placeholder{
+color:whitesmoke;
+}
+
+.commentArea::placeholder{
+color:whitesmoke;
+}
+
+.commentArea{
+border:2px solid white;
+background:none;
+border-radius:15px;
+height:100px;
+padding-left:15px;
+outline:none;
+width:85%;
+color:white;
+padding-top:5px;
+resize:none;
+font-size:15px;
+margin-top:20px;
+}
+
+.sendBtn{
+margin-top:20px;
+height:45px;
+background:white;
+border:0;
+color:black;
+border-radius:30px;
+outline:none;
+width:85%;
+font-size:14px;
+}
+
+.sendBtn:hover{
+box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+}
+
+.lineForm{
+height:3px;
+width:50px;
+background:white;
+border-radius:30px;
+}
+
+.matCardRequest{
+box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.55);
+-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.55);
+-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.55);
+border-radius:10px;
+background-image: linear-gradient(to right top, #1575b7, #126ba8, #0f6199, #0c578a, #094d7c);
+color:white;
+padding-bottom:40px;
+}
+
+.accordion-body{
+color:white !important;
+font-size:15px !important;
+}
+
+
+.accordion-item{
+background:none !important;
+border:0 !important;
+}
+
+.accordion-button{
+border-radius:30px !important;
+margin-bottom:10px;
+font-size:15px;
+background-color: rgba(255, 255, 255, 1);
+}
+
+.height-after{
+min-height:90vh;
+}
+
+.preorderJumia{
+border:0;
+background:white;
+padding:7px 20px 7px 20px;
+outline:none;
+border-radius:4px;
+text-decoration:none;
+color:black;
+margin-top:10px;
+}
+
+.animatedIcon{
+width:30%;
+}
+
+.heightAnimated{
+height:100%;
+}

@@ -1,0 +1,364 @@
+<app-nav-home></app-nav-home>
+<!-- <button class="questionBtn d-flex align-items-center justify-content-center" routerLink="/faq">
+  <i class="ri-questionnaire-line ri-lg"></i>
+  <span class="questionSpan">&nbsp;&nbsp;ASK A QUESTION</span>
+</button> -->
+<header>
+  <!----------------DESKTOP AND TABLET NAVBAR STYLE------------------->
+  <div class="desktop-and-tablet position-relative" >
+    <div class="videoAccueilFrame d-flex justify-content-center position-relative d-flex align-items-center">
+      <!--Carousel Wrapper-->
+
+      <!--Carousel Wrapper-->
+<mdb-carousel #carousal  [interval]="1000" [isControls]="false" data-ride="carousel" 
+  class="carousel slide carousel-fade" 
+  (activeSlideChange)="activeSlideChange(carousal)">
+    <!--First slide-->
+
+  <mdb-carousel-item id="vid1">
+      <!--Mask color-->
+      <div class="view">
+          <!--Video source-->
+          <video class="video-fluid" autoplay loop [muted]="true">
+              <source src="../../assets/videos/team.mp4" type="video/mp4" />
+          </video>
+          <div class="mask rgba-indigo-light waves-light" mdbWavesEffect></div>
+      </div>
+      
+  </mdb-carousel-item>
+  <!--/First slide-->
+
+  <!--Third slide-->
+  
+  <!--/Third slide-->
+</mdb-carousel>
+
+
+<!--Carousel Wrapper-->
+<!--Carousel Wrapper-->
+    </div>
+  <br>
+
+  <br>
+  <div style="margin-top:-35px"class="videoAccueilFrame d-flex justify-content-center position-relative d-flex align-items-center">
+
+  <mdb-carousel [controls]="true" [indicators]="true" [dark]="true">
+    <mdb-carousel-item>
+      <img
+        src="../../assets/imgs/rendering/bakoHome.png"
+        class="d-block w-100"
+        alt="..."
+      />
+     
+    </mdb-carousel-item>
+    <mdb-carousel-item>
+      <img
+        src="../../assets/sef.png"
+        class="d-block w-100"
+        alt="..."
+      />
+      
+    </mdb-carousel-item>
+    <mdb-carousel-item>
+      <img
+        src="../../assets/imgs/gallery/90.png"
+        class="d-block w-100"
+        alt="..."
+      />
+      
+    </mdb-carousel-item>  
+  </mdb-carousel>
+
+  
+  </div>
+
+  <div class="row position-absolute arrow-direction">
+    <div class="col-12 d-flex justify-content-center">
+      <div class="arrowAnimation"><i class="ri-arrow-down-s-line ri-3x"></i></div>
+    </div>
+  </div>
+  <table class="bottomRight">
+    <tr>
+      <td><i class="ri-map-pin-fill ri-lg"></i></td>
+      <td><h3 class="textShadow">Tunisia, Germany</h3></td>
+    </tr>
+    <tr>
+      <td colspan="2" class="font-size-12 textShadow">Hello world ! Bako Motors is a German-Tunisian startup that develops and manufactures solar electric vehicles. Combining both solar and electrical power, we have created something different: <br><b>A car charging itself</b> <br><b> We aim to make sustainable mobility affordable for all.</b></td>
+    </tr>
+  </table>
+</div>
+
+  <!--------------------MOBILE NAVBAR STYLE--------------------->
+  <div class="mobile-display backgroundGris mobileHead">
+    <mdb-carousel #carousal  [interval]="1000" [isControls]="false" data-ride="carousel" 
+    class="carousel slide carousel-fade" 
+    (activeSlideChange)="activeSlideChange(carousal)">
+      <!--First slide-->
+  
+    <mdb-carousel-item id="vid1">
+        <!--Mask color-->
+        <div class="view">
+            <!--Video source-->
+            <video class="video-fluid" autoplay loop [muted]="true">
+                <source src="../../assets/videos/team.mp4" type="video/mp4" />
+            </video>
+            <div class="mask rgba-indigo-light waves-light" mdbWavesEffect></div>
+        </div>
+        
+    </mdb-carousel-item>
+    <!--/First slide-->
+  
+    <!--Third slide-->
+    
+    <!--/Third slide-->
+  </mdb-carousel>    <div class="container mb-buyBtn">
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+          <button routerLink="/order" class="bakoPreorderBtn d-flex align-items-center"><i class="ri-shopping-cart-fill ri-lg"></i>&nbsp;BUY BNOW</button>
+        </div>
+      </div>
+    </div>
+    <mdb-carousel [controls]="true" [indicators]="true" [dark]="true">
+      <mdb-carousel-item>
+        <img
+          src="../../assets/imgs/rendering/bakoHome.png"
+          class="d-block w-100"
+          alt="..."
+        />
+       
+      </mdb-carousel-item>
+      <mdb-carousel-item>
+        <img
+          src="../../assets/sef.png"
+          class="d-block w-100"
+          alt="..."
+        />
+        
+      </mdb-carousel-item>
+      <mdb-carousel-item>
+        <img
+          src="../../assets/imgs/gallery/90.png"
+          class="d-block w-100"
+          alt="..."
+        />
+        
+      </mdb-carousel-item>  
+    </mdb-carousel>
+  </div>
+</header>
+<section>
+  <div class="width-100">
+    <div class="row">
+      <div class="col-lg-6 col-xl-6 col-sm-12 col-xs-12 d-flex justify-content-center backgroundBleu">
+        <div class="row color-white width-60">
+          <div class="col-12 mt-4"><div class="bigText"></div></div>
+          <div class="col-12 marginTop40"><div class="font-size-15"></div></div>
+          <div class="col-12 marginTop10">
+            <div class="font-size-90">
+            <h4>Our products are perfectly designed and engineered for urban areas.</h4> 
+            </div>
+          </div>
+          <div class="col-12 mb-5">
+            <button routerLink="/bako" class="discoverBtn">Discover the B1</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-6 col-sm-12 col-xs-12 p-0  backgroundGris">
+        <img class="imageSize" src="../../assets/2.jpg" alt="">
+        <!-- <div class="row">
+          <div class="col-12 sunGodText">BAKO MOTORS</div>
+          <div class="col-12 d-flex justify-content-center">
+            <img class="remonteTop" src="../../assets/imgs/rendering/bakoWithDoors.png" width="350px" alt="">
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  <div class="whyBakoFrame d-flex justify-content-center position-relative d-flex align-items-center">
+    <div class="whyBakoFrameRow d-flex" style="z-index:10">
+      <img src="../../assets/imgs/img2.png" class="backgroundImageHome blurryImg" alt="bako motors with door">
+    </div>
+    <div class="whyContent">
+      <h3 align="center" class="colorwhite mt-25">Why Bako?</h3>
+      <div class="row"><div class="col-12 d-flex justify-content-center"><div class="line-white"></div></div></div>
+      <div class="row mt-25 d-flex justify-content-center">
+        <div class="col-lg-4 col-xl-4 col-sm-12 col-xs-12 centerMobile d-flex justify-content-center">
+          <div class="card cardOrange">
+            <table>
+              <tr>
+                <td class="img-icone" rowspan="2"><img src="../../assets/imgs/innov.png" width="45px" alt="bako technology"></td>
+                <td>
+
+                  <tr><td   class="title">Technology</td></tr>
+                  <tr><td  class="subtitle">Track your transport fleet instantanly</td></tr>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="col-lg-4 col-xl-4 col-sm-12 col-xs-12 centerMobile d-flex justify-content-center">
+          <div class="card cardOrange">
+            <table>
+              <tr>
+                <td class="img-icone" rowspan="2"><img src="../../assets/imgs/solar.png" width="45px" alt="bako technology"></td>
+                <td>
+                  <tr><td  width="0%" class="title">Solar cells</td></tr>
+                  <tr><td   width="100%" class="subtitle">50 kilometers for free per day.</td></tr>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="col-lg-4 col-xl-4 col-sm-12 col-xs-12 centerMobile d-flex justify-content-center">
+          <div class="card cardOrange">
+            <table>
+              <tr>
+                <td class="img-icone" rowspan="2"><img src="../../assets/imgs/economy.png" width="45px" alt="bako technology"></td>
+                <td class="td">
+                  <tr><td  width="10%" class="title">Operation cost</td></tr>
+                  <tr><td  width="90%" class="subtitle">Only 0.5$ per 100 kilometers</td></tr>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-xl-4 col-sm-12 col-xs-12 centerMobile d-flex justify-content-center">
+          <div class="card cardOrange">
+            <table>
+              <tr>
+                <td class="img-icone" rowspan="2"><img src="../../assets/imgs/icons/loading.png" width="45px" alt="bako technology"></td>
+                <td>
+                  <tr><td width="60%" class="title">Loading space</td></tr>
+                  <tr><td class="subtitle">Up to 2000L</td></tr>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      
+        <div class="col-lg-4 col-xl-4 col-sm-12 col-xs-12 centerMobile d-flex justify-content-center">
+          <div class="card cardOrange">
+            <table>
+              <tr>
+                <td class="img-icone" rowspan="2"><img src="../../assets/imgs/icons/zero-emission.png" width="45px" alt="bako technology"></td>
+                <td>
+                  <tr><td class="title">Zero emission technology</td></tr>
+                  <tr><td class="subtitle">Electric powertrain producing 4000 W</td></tr>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="col-lg-4 col-xl-4 col-sm-12 col-xs-12 centerMobile d-flex justify-content-center">
+          <div class="card cardOrange">
+            <table>
+              <tr>
+                <td class="img-icone" rowspan="2"><img src="../../assets/imgs/icons/lamp.png" width="45px" alt="bako technology"></td>
+                <td>
+                  <tr><td  width="30%" class="title">Compact design</td></tr>
+                  <tr><td  width="70%" class="subtitle">Perfect for city driving</td></tr>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center">
+        <div class="card cardWhite">
+          <h6 class="keepInTouch">KEEP IN TOUCH</h6>
+          <div class="row mt-2">
+            <div class="col-lg-5 col-xl-5 col-sm-12 col-xs-12 d-flex">
+            
+              <button class="socialMediaBtn" (click)='linkfcb()'><i class="ri-facebook-fill ri-lg"></i></button>
+              <button class="socialMediaBtn" (click)='linklinkedin()'><i class="ri-linkedin-fill ri-lg"></i></button>
+              <button class="socialMediaBtn" (click)='linkyoutube()'><i class="ri-youtube-fill ri-lg"></i></button>
+              <button class="socialMediaBtn" (click)='linkinstagram()'><i class="ri-instagram-line ri-lg"></i></button>
+            </div>
+            <div class="col-lg-4 col-xl-4 col-sm-12 col-xs-12 d-flex formInTouch">
+              <input class="kitInput" type="email" placeholder="Veuillez entrer votre email...">
+            </div>
+            <div class="col-lg-3 col-xl-3 col-sm-12 col-xs-12 formInTouch">
+              <button class="sendBtn">Envoyer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid d-none d-flex align-items-center mt-5 p-0 m-0 bakoShow">
+    <div class="container color-white">
+      <div class="row text-end">
+        <font size="1" class="weight-400 uppercase opacity-5 mobile-display">On board the B1, at the heart of innovation</font>
+        <h1 align="right" class="uppercase carac-size mobile-display">CHARACTERISTICS</h1>
+      </div>
+      <div class="row">
+        <div class="col-6 flex-direction-column">
+          <div class="col-12 d-flex justify-content-center margin-40">
+            <img class="rendering" src="../../assets/imgs/rendering/">
+          </div>
+          <h5 class="opacity-5" align="center">BAKO B1</h5>
+        </div>
+        <div class="col-6">
+          <h6 class="weight-400 uppercase opacity-5 desktop-and-tablet">On board the B1, at the heart of innovation</h6>
+          <h1 class="uppercase carac-size desktop-and-tablet">CHARACTERISTICS</h1>
+          <table class="mt-4 mobile-right-align" width="100%">
+            <tr>
+              <td class="weight-600">MODEL</td>
+              <td class="weight-600">RANGE</td>
+            </tr>
+            <tr>
+              <td class="value">B10</td>
+              <td class="value">Up to 200km</td>
+            </tr>
+            <tr>
+              <td class="weight-600">CHARGING TIME</td>
+              <td class="weight-600">LOADING CAPACITY</td>
+            </tr>
+            <tr>
+              <td class="value">80% in 2h</td>
+              <td class="value">2000 Liters</td>
+            </tr>
+            <tr>
+              <td class="weight-600">PASSENGERS</td>
+              <td class="weight-600">POWER</td>
+            </tr>
+            <tr>
+              <td class="value">2 persons</td>
+              <td class="value">4000W</td>
+            </tr>
+            <tr>
+              <td class="weight-600">BATTERY TECHNOLOGY</td>
+              <td class="weight-600">PRICE</td>
+            </tr>
+            <tr>
+              <td class="value">Lithium iron phosphate</td>
+              <td class="value">5000 $</td>
+            </tr>
+            <tr>
+              <td class="weight-600">SPEED</td>
+              <td class="weight-600">DRIVER LICENCE</td>
+            </tr>
+            <tr>
+              <td class="value">45km/h</td>
+              <td class="value">No need</td>
+            </tr>
+          </table>
+          <button routerLink="/bako" class="discoverDesktopBtn desktop-and-tablet">DISCOVER THE B1</button>
+        </div>
+      </div>
+      <div class="row mobile-display">
+        <div class="col-12 d-flex justify-content-center">
+          <button class="discoverMobileBtn">DISCOVER THE B1</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="backgroundGris footerMonte">
+  <app-footer></app-footer>
+</footer>

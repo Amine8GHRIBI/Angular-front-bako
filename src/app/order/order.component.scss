@@ -1,0 +1,503 @@
+
+
+// In real life, this should be in our main sass file so we can share the palette between all components. 
+// In our case, it's in the component SCSS file "expansion-styling.component.scss".
+
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+
+// Add your brand colors.
+$my-primary-color:		#D8DBE2;
+$my-secondary-color: #ffd351;
+
+// Create custom palette.
+$my-color-palette: palette(
+    $primary: $my-primary-color,
+    $secondary: $my-secondary-color
+);
+// In expansion-styling.component.scss
+// Create expansion panel theme.
+$custom-panel-theme: expansion-panel-theme(
+    // pass `$my-color-palette` palette.
+    $palette: $my-color-palette,
+
+    // Styling parameters.
+    $header-background: color($my-color-palette, "primary", 200),
+    $header-focus-background: color($my-color-palette, "primary", 100),
+    $header-title-color: color($my-color-palette, "secondary"),
+    $header-icon-color: color($my-color-palette, "secondary"),
+    $body-background: color($my-color-palette, "primary", 400),
+    $border-radius: .5
+);
+// In expansion-styling.component.scss
+// Pass our custom-panel-theme to `igx-expansion-panel` mixin.
+// The `:host` here makes sure that all the theming will affect only this component.
+:host {
+    @include css-vars($custom-panel-theme);
+  }
+// In expansion-styling.component.scss
+// The `:host` here makes sure that all the theming will affect only this component after the ViewEncapsulation Penetration.
+:host {
+    // Penetrate the ViewEncapsulation.
+    ::ng-deep {
+        @include expansion-panel($custom-panel-theme);
+    }
+}
+  
+
+.faqInput{
+    border:2px solid white;
+    background:none;
+    border-radius:30px;
+    height:45px;
+    padding-left:5px;
+    outline:none;
+    width:85%;
+    color:rgb(241, 12, 12);
+    font-size:15px;
+    margin-top:20px;
+    }
+    
+    .faqInput::placeholder{
+    color:whitesmoke;
+    }
+    
+    .commentArea::placeholder{
+    color:whitesmoke;
+    }
+    
+    .commentArea{
+    border:2px solid white;
+    background:none;
+    border-radius:15px;
+    height:100px;
+    color:white;
+    padding-left:15px;
+    outline:none;
+    width:85%;
+    padding-top:5px;
+    resize:none;
+    font-size:15px;
+    margin-top:20px;
+    }
+    
+    .sendBtn{
+    margin-top:20px;
+    height:45px;
+    background:white;
+    border:0;
+    color:black;
+    border-radius:30px;
+    outline:none;
+    width:85%;
+    font-size:14px;
+    font-weight: 500;
+    }
+   
+    .sendBtn:hover{
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+    }
+    
+    .lineForm{
+    height:3px;
+    width:50px;
+    background:white;
+    border-radius:30px;
+    }
+    
+    .matCardRequest{
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.55);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.55);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.55);
+    border-radius:10px;
+    background-image: linear-gradient(to right top, #f75f26, #e35520, #d04b19, #bd4113, #aa370d);
+    color:white;
+    padding-bottom:40px;
+    height:620px;
+    }
+    
+    
+    .height-after{
+    min-height:90vh;
+    }
+    
+    
+    .descriptionExemple{
+    height:44px;
+    font-size:15px;
+    color:white;
+    cursor:pointer;
+    }
+    
+    
+    .descMsg{
+    visibility: hidden;
+    width: 250px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 4px;
+    position: absolute;
+    z-index: 1;
+    font-size:15px;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -125px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+    }
+    
+    .descMsg::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: white transparent transparent transparent;
+    }
+    
+    label:hover .descMsg{
+    visibility:visible;
+    }
+    
+    .sample-holder{
+      width:100%
+    }
+    .preorderFrame{
+    min-height:calc(520px - 0px);
+    max-height:calc(520px - 0px);
+    overflow-x:hidden;
+    overflow-y:hidden;
+    border-top-left-radius:10px !important;
+    border-bottom-left-radius:10px !important;
+    border-radius:0;
+    padding:0;
+    }
+    
+    .height-100{
+    height:100%;
+    }
+    
+    .preorderFrameRow{
+    height:auto;
+    width:auto;
+    }
+    
+    .orderImage{
+      height: auto;
+      width: auto;
+     
+    }
+    .mat-card-title {
+      font-size: 25px;
+   }
+    .mat-card-subtitle{
+      margin-top: 2px;
+      font-size: 25px;
+    }
+    .current-selection {
+      background-color: green;
+    }
+    
+    .carousel-control-prev-icon {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+  }
+  
+  .carousel-control-next-icon {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+  }
+  .content {
+    height: calc(100vh - 64px);
+    overflow: auto;
+}
+
+    
+    .bakoExempleImage{
+    height:600px;
+    width:auto;
+    }
+    
+    .text-gras{
+    font-weight:600;
+    }
+    
+    .text-decor{
+    background:white;
+    padding:5px 10px 5px 10px;
+    border-radius:3px;
+    }
+    
+    .selectedDesign{
+    border:3px solid white;
+    }
+    
+    .marginLeftRadio{
+    margin-left:10px;
+    }
+    
+    label{
+    cursor:pointer;
+    }
+    
+    
+    
+    .bakoVersion1:hover .bakoExempleImage{
+        -webkit-transform: scale(0.87);
+        transform: scale(0.87);
+        transition:0.3s;
+    }
+    .bakoVersion2:hover .bakoExempleImage{
+        -webkit-transform: scale(0.87);
+        transform: scale(0.87);
+        transition:0.3s;
+    }
+    
+    
+    .backgroundGris{
+      background: #dcdbdf;
+      padding-top:40px;
+    }
+    .example-viewport {
+  height: 200px;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.example-alternate {
+  background: rgba(127, 127, 127, 0.3);
+}
+
+.example-select-all {
+  float: right;
+  margin-right: 32px;
+}
+.basic-container {
+  padding: 1px;
+  height: 100%;
+  border-color: brown;
+}
+.mat-table {
+  display: block;
+  border-color: brown;
+}
+.version-info {
+  font-size: 8pt;
+  float: right;
+}
+
+.mat-accordion{
+  border-color: brown;
+
+}
+.example-viewport{
+  height: 500px;
+  border-color : white;
+  
+}
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}
+
+
+// list items body panel
+
+/* HeroesComponent's private CSS styles */
+.heroes {
+  margin: 0 4em 1em -3em;
+  list-style-type: none;
+  
+  width: 31em;
+}
+
+.heroes li {
+  display: flex;
+}
+
+.heroes .buttonitem{
+  flex: 1;
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: rgb(253, 252, 252);
+  margin: .5em;
+  padding: 0;
+  border-radius: 1px;
+  border-color: white;
+  display: flex;
+  align-items: stretch;
+  height: 5.1em;
+}
+
+.heroes button:hover {
+  color: #2c3a41;
+  background-color: #e6e6e6;
+  left: .1em;
+}
+
+.heroes button:active {
+  background-color: #525252;
+  color: #fafafa;
+}
+
+.heroes button.selected {
+  
+  color: rgba(236, 137, 16, 0.966);
+  border-color: rgba(236, 137, 16, 0.966) ;
+}
+.addToCartButton{
+  padding: 0 16px;
+  border-radius: 4px;
+  margin-right: 1rem;
+  color: white;
+  background-color: #448AFF;
+  max-height: 40px;
+  border-left: none !important;
+  width: 30%;
+}
+
+
+#bloc1, #bloc2
+{
+  display: inline-block;
+ 
+
+}
+#bloc2{
+  float: right;
+  color: #D8DBE2;
+  border-color: #D8DBE2;
+
+}
+
+.containerbttn{
+  background-color: rgb(238, 238, 238);
+  margin-top: -30px;
+  height: 70px;
+  float: center;
+   width: 70px;
+  position: relative;
+  border: 3px solid rgba(236, 137, 16, 0.966);
+}
+.heroes button.selected:hover {
+  background-color: #505050;
+  color:  rgba(236, 137, 16, 0.966);
+}
+
+.heroes button.selected:active {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.heroes .badge {
+  display: inline-block;
+  justify-content: center;
+  font-size: small;
+  color: white;
+  padding: 1.5em 0.7em 0 0.7em;
+  background-color: rgb(60, 122, 166);
+  line-height: 1em;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+}
+
+.heroes .name {
+  align-self: center;
+}
+
+
+.btn{
+  background-color: rgb(128, 68, 0);
+ 
+}
+body{background-color: #eee}
+.buttons{padding: 5px;background-color: #d6d4d4;border-radius: 8px;position: relative}
+.dot{height: 1px;width: 14px;background-color: green;border-radius: 50%;position: absolute;left:27%;display: flex;justify-content: center;align-items: center;font-size: 8px;color: #fff;opacity: 0}.cart-button{height: 48px;color: #d6d4d4;}.cart-button:focus{box-shadow: none}.cart{position: relative;height: 48px !important;width: 50px;margin-right: 8px;display: flex;justify-content: center;align-items: center;background-color: #fff;padding: 11px;border-radius: 5px;font-size: 21px}.cart-button.clicked span.dot{animation: item 0.3s ease-in forwards}
+span.badge{
+  color: rgba(236, 137, 16, 0.966);
+}
+
+.mat-badge-content{
+  background-color: orange;
+}
+
+.floatingButton{
+  background-color:   rgb(128, 68, 0);
+  ;
+      width: 50px;
+			height: 35px;
+			font-size: 15px;
+			text-align: center;
+}
+
+@media screen and (max-width: 600px){
+  .button{
+          display: block;
+          position: relative;
+          left: 50%; transform: translateX(-50%);
+        }
+  }
+  
+  ngb-carousel {
+    width: 100%;
+    margin: 50px auto;
+}
+ngb-carousel img {
+    width: 100%;
+    outline: none;
+}
+ngb-carousel {
+    width: inherit;
+    height: inherit;
+}
+.carousel-inner {
+    overflow: visible;
+}
+.carousel-item {
+    display: flex !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.2s ease-in-out, visibility 1.2s;
+    z-index: -1;
+}
+.carousel-item.active{
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+.carousel-control-prev {
+     z-index: 20;
+}
+
+.carousel-control-next {
+     z-index: 20;
+}
+.carousel-indicators{
+    z-index: 20;
+}

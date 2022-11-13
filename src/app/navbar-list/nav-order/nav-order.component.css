@@ -1,0 +1,62 @@
+.bakoNavBtn{
+border:0;
+color:black;
+font-weight:500;
+font-size:14px;
+outline:none;
+background:none;
+padding:7px 0px 7px 0px;
+margin-right:15px;
+}
+
+.souligne{
+border-bottom:3px solid black !important;
+}
+
+.preorder{
+background:black !important;
+color:white !important;
+transition:0.2s;
+}
+
+.bako-white{
+display:none;
+}
+
+.navbarStyle{
+height:10vh;
+z-index:99 !important;
+background:white;
+box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.18);
+-webkit-box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.18);
+-moz-box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.18);
+}
+
+.bakoPreorderBtn{
+background: #d89441;
+border:2px solid #d89441;
+border-radius:30px;
+padding:7px 25px 7px 25px;
+outline:none;
+color:white;
+font-size:12px;
+font-weight:500;
+margin-left:10px;
+box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.18);
+-webkit-box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.18);
+-moz-box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.18);
+}
+
+.actif{
+border-bottom:2px solid black;
+}
+
+/************MOBILE HEADER***************/
+
+.mbNavbarStyle{
+height:20vh;
+z-index:99 !important;
+box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.18);
+-webkit-box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.18);
+-moz-box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.18);
+}

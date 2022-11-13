@@ -1,0 +1,41 @@
+<app-nav-bako></app-nav-bako>
+
+<body>
+<div class="main-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Create your account</mat-card-title>
+      </mat-card-header>
+  
+      <form class="example-form" [formGroup]="registrationForm" >
+  
+        <mat-card-content>
+          <mat-form-field class="example-full-width">
+            <input formControlName="username" matInput placeholder="Username">
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width">
+            <input formControlName="email" matInput placeholder="Email">
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width">
+            <input formControlName="password" matInput placeholder="Password">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input formControlName="city" matInput placeholder="city">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input formControlName="street" matInput placeholder="street">
+          </mat-form-field>
+  
+          
+        </mat-card-content>
+        <button mat-stroked-button color="blue" class="btn-block" (click)="register()">Sign-up</button>
+  
+      </form> 
+    </mat-card>
+  </div>
+
+</body>

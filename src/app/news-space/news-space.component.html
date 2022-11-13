@@ -1,0 +1,401 @@
+<app-nav-news></app-nav-news>
+<div class="container-fluid desktopMargin">
+  <div class="row position-relative">
+    <div class="backgroundFrame p-0 d-flex align-items-center">
+      <div class="backgroundRow">
+        <img class="backgroundImage" src="../../assets/imgs/img11.jpg"/>
+      </div>
+    </div>
+    <div class="backgroundAbsolute"></div>
+    <div class="row d-flex justify-content-center align-items-center position-absolute mobileRow rowAbsolute">
+      <div class="col-12 text-center mt-4">
+        <h4 class="color-white" align="center">Bako news</h4>
+        <p class="color-white">discover all the news of bako motors. A journey of innovation.</p>
+      </div>
+      <div class="col-12 d-flex justify-content-center" style="margin-top:-50px;">
+        <button (click)="changeDix()" *ngIf="!awards" class="mbDiscoverBtn">PRESS</button>
+        <button (click)="changeDix()" *ngIf="awards" class="mbDiscoverBtn outline">PRESS</button>
+        <button (click)="changeVingt()" *ngIf="!certif" class="mbDiscoverBtn">AWARDS & CERTIFICATES</button>
+        <button (click)="changeVingt()" *ngIf="certif" class="mbDiscoverBtn outline">AWARDS & CERTIFICATES</button>
+        <button (click)="changeTrente()" *ngIf="!partner" class="mbDiscoverBtn">PARTNERS</button>
+        <button (click)="changeTrente()" *ngIf="partner" class="mbDiscoverBtn outline">PARTNERS</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container mt-4">
+
+  <!-----------------EMISSIONS ET ARTICLES------------------->
+  <div *ngIf="awards" class="row">
+    <div class="col-md-8 col-lg-8 col-xl-8 col-sm-12">
+      <mat-card *ngIf="mosaique" class="newsCard p-0 mb-4">
+        <mat-card-content>
+          <iframe class="mb-viewerImageStyle" width="100%" height="340" src="https://www.youtube.com/embed/JwMhdKXpx6o?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </mat-card-content>
+        <mat-card-header>
+          <mat-card-title><div>Mosaique</div></mat-card-title>
+          <mat-card-subtitle><div>Première voiture tunisienne électrique  à la foire automobile de Munich</div></mat-card-subtitle>
+          <mat-card-subtitle><font color="blue">10 /09/2021</font></mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+
+      <mat-card *ngIf="cartage" class="newsCard p-0 mb-4">
+        <mat-card-content>
+          <iframe class="mb-viewerImageStyle" width="100%" height="340" src="https://www.youtube.com/embed/o2co5uhmAy8?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </mat-card-content>
+        <mat-card-header>
+          <mat-card-title><div>Cartage</div></mat-card-title>
+          <mat-card-subtitle><div>Intervention Boubaker Siala Directeur BAKO Motors</div></mat-card-subtitle>
+          <mat-card-subtitle><font color="blue">15 feb. 2022</font></mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+
+      <mat-card *ngIf="euronews" class="newsCard p-0 mb-4">
+        <mat-card-content>
+          <iframe class="mb-viewerImageStyle" width="100%" height="340" src="https://www.youtube.com/embed/Q83an6eTQfs?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </mat-card-content>
+        <mat-card-header>
+          <mat-card-title><div>Euronews</div></mat-card-title>
+          <mat-card-subtitle><div>The three-wheeled solar-powered electric car its Tunisian designer hopes will change city driving.</div></mat-card-subtitle>
+          <mat-card-subtitle><font color="blue">11/03/2022</font></mat-card-subtitle>
+          <mat-card-subtitle>
+            <a class="articleBtn" target="_blank" href="https://arabic.euronews.com/next/2022/03/12/video-tunisian-designer-create-electric-car-powered-solar-energy?utm_medium=Social&utm_source=Facebook&fbclid=IwAR0LNlczI5deL1CcOig3W4MGuoauou84j4TUtH5_ssxreRjB_b_0qbelb0Y#Echobox=1647106169">
+            Open the article
+            </a>
+          </mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+
+      <mat-card *ngIf="reuter" class="newsCard p-0 mb-4">
+        <mat-card-content>
+          <iframe class="mb-viewerImageStyle" width="100%" height="340" src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FReuters%2Fvideos%2F297753455793902%2F&show_text=false&width=560&t=0" frameborder="0" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+        </mat-card-content>
+        <mat-card-header>
+          <mat-card-title><div>Reuter</div></mat-card-title>
+          <mat-card-subtitle><div>This Tunisian electric car is powered by the sun.</div></mat-card-subtitle>
+          <mat-card-subtitle><font color="blue">10/03/2022</font></mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+
+      <mat-card *ngIf="derSpiegel" class="newsCard p-0 mb-4">
+        <mat-card-content>
+          <iframe class="mb-viewerImageStyle" width="100%" height="340" src="../../assets/imgs/thumbnail/spiegel.jpg" frameborder="0" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+        </mat-card-content>
+        <mat-card-header>
+          <mat-card-title><div>Der Spiegel</div></mat-card-title>
+          <mat-card-subtitle><div>The sun god</div></mat-card-subtitle>
+          <mat-card-subtitle>
+            <div>
+              A German-Tunisian start-up has built a vehicle that runs on solar power and fits through any narrow alley. Name and development are idiosyncratic - now the practical test should follow.
+            </div>
+          </mat-card-subtitle>
+          <mat-card-subtitle><font color="blue">10/03/2022</font></mat-card-subtitle>
+          <mat-card-subtitle>
+            <a class="articleBtn" target="_blank" href="https://www-spiegel-de.cdn.ampproject.org/c/s/www.spiegel.de/auto/solarzellen-kleintransporter-deutsch-tunesisches-startup-erfindet-solarauto-a-abc65f8d-c5bd-4145-913a-b9665802e24d-amp?fbclid=IwAR270v6pHs5C-4EKdKcGJD37EvXPgHx0n4M6hw8LxxIOavzGRC-XExVNiD8">
+              Open the article
+            </a>
+          </mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+
+      <mat-card *ngIf="expressfm" class="newsCard p-0 mb-4">
+        <mat-card-content>
+          <iframe class="mb-viewerImageStyle" width="100%" height="340" src="../../assets/imgs/thumbnail/express.jpg" frameborder="0" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+        </mat-card-content>
+        <mat-card-header>
+          <mat-card-title><div>Express Fm</div></mat-card-title>
+          <mat-card-subtitle><div>Bako Motors transforms thermal vehicles into 100% electric vehicles.</div>
+          </mat-card-subtitle>
+          <mat-card-subtitle><font color="blue">10/03/2022</font></mat-card-subtitle>
+          <mat-card-subtitle>
+            <a class="articleBtn" target="_blank" href="https://radioexpressfm.com/podcast/bako-motors-transforme-les-vehicules-thermiques-en-vehicules-100-electriques/">
+              Open interview
+            </a>
+          </mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+
+      <mat-card *ngIf="cnn" class="newsCard p-0 mb-4">
+        <mat-card-content>
+          <iframe class="mb-viewerImageStyle" width="100%" height="340" src="../../assets/imgs/thumbnail/cnnT.jpg" frameborder="0" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+        </mat-card-content>
+        <mat-card-header>
+          <mat-card-title><div>CNN</div></mat-card-title>
+          <mat-card-subtitle><div>This vehicle made in Tunisia is an economical and ecological option</div></mat-card-subtitle>
+          <mat-card-subtitle><font color="blue">18/03/2022</font></mat-card-subtitle>
+          <mat-card-subtitle>
+            <a class="articleBtn" target="_blank" href="https://cnnespanol.cnn.com/video/vehiculo-ecologico-economico-gas-precios-clix-cnn/">
+              Open article
+            </a>
+          </mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+
+      <mat-card *ngIf="rtci" class="newsCard p-0 mb-4">
+        <mat-card-content>
+          <iframe class="mb-viewerImageStyle" width="100%" height="340" src="https://www.youtube.com/embed/AvyM2pyfW1k?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </mat-card-content>
+        <mat-card-header>
+          <mat-card-title><div>RTCI</div></mat-card-title>
+          <mat-card-subtitle><div>Bako motors on RTCI</div></mat-card-subtitle>
+          <mat-card-subtitle><font color="blue">14/12/2021</font></mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+
+      <mat-card *ngIf="amazingWorld" class="newsCard p-0 mb-4">
+        <mat-card-content>
+          <iframe class="mb-viewerImageStyle" width="100%" height="340" src="https://www.youtube.com/embed/IbQepCnzGqU?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </mat-card-content>
+        <mat-card-header>
+          <mat-card-title><div>Amazing World</div></mat-card-title>
+          <mat-card-subtitle><div>This Tunisian electric car is powered by the sun : Three-wheeled electric car : Boubaker Siala</div></mat-card-subtitle>
+          <mat-card-subtitle><font color="blue">10/03/2022</font></mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+
+      <mat-card *ngIf="watania" class="newsCard p-0 mb-4">
+        <mat-card-content>
+          <iframe class="mb-viewerImageStyle" width="100%" height="340" src="https://www.youtube.com/embed/AW701k0lgPU?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </mat-card-content>
+        <mat-card-header>
+          <mat-card-title><div>Watania 1</div></mat-card-title>
+          <mat-card-subtitle><div>The first Tunisian car with solar energy. Manufacturing and marketing</div></mat-card-subtitle>
+          <mat-card-subtitle><font color="blue">19/12/2021</font></mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+      <mat-card *ngIf="maghrebVoices" class="newsCard p-0 mb-4">
+        <mat-card-content>
+          <iframe class="mb-viewerImageStyle" width="100%" height="340" src="https://www.youtube.com/embed/nfU13Sxuxts?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </mat-card-content>
+        <mat-card-header>
+          <mat-card-title><div>Maghreb voices</div></mat-card-title>
+          <mat-card-subtitle><div>He returned to Tunisia and developed an environmentally friendly car powered by solar energy. Boubaker: All parts of the car are manufactured with Tunisian expertise</div></mat-card-subtitle>
+          <mat-card-subtitle><font color="blue">06/11/2021</font></mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </div>
+
+
+  <div class="col-md-4 col-lg-4 col-xl-4 col-sm-12">
+      <div class="suggestionFrame">
+        <div class="suggestionRow">
+          <mat-card (click)="gotoReuter()" class="p-0 suggestionCard mb-2 notMatStyle">
+            <mat-card-header>
+              <button class="playButton d-flex align-items-center justify-content-center"><i class="ri-play-fill ri-lg"></i></button>
+              <img class="suggestionAvatar" mat-card-avatar src="../../assets/imgs/thumbnail/reuter.png">
+              <mat-card-title class="usernameNavModal"><div class="overTextSuggestion">Reuter</div></mat-card-title>
+              <mat-card-subtitle><div class="overTextSuggestion">This Tunisian electric car is powered by the sun.</div></mat-card-subtitle>
+              <mat-card-subtitle><div class="overTextSuggestion">11/03/2022</div></mat-card-subtitle>
+            </mat-card-header>
+          </mat-card>
+          <mat-card (click)="gotoEuronews()" class="p-0 suggestionCard mb-2 notMatStyle">
+            <mat-card-header>
+              <button class="playButton d-flex align-items-center justify-content-center"><i class="ri-play-fill ri-lg"></i></button>
+              <img class="suggestionAvatar" mat-card-avatar src="../../assets/imgs/thumbnail/euronews.png">
+              <mat-card-title class="usernameNavModal"><div class="overTextSuggestion">Euronews</div></mat-card-title>
+              <mat-card-subtitle><div class="overTextSuggestion">The three-wheeled solar-powered electric car its Tunisian designer hopes will change city driving.</div></mat-card-subtitle>
+              <mat-card-subtitle><div class="overTextSuggestion">11/03/2022</div></mat-card-subtitle>
+            </mat-card-header>
+          </mat-card>
+          <mat-card (click)="gotoSpiegel()" class="p-0 suggestionCard mb-2 notMatStyle">
+            <mat-card-header>
+              <img class="suggestionAvatar" mat-card-avatar src="../../assets/imgs/thumbnail/spiegel.jpg">
+              <mat-card-title class="usernameNavModal"><div class="overTextSuggestion">Der spiegel</div></mat-card-title>
+              <mat-card-subtitle><div class="overTextSuggestion">The sun god.</div></mat-card-subtitle>
+              <mat-card-subtitle><div class="overTextSuggestion">19/03/2022</div></mat-card-subtitle>
+            </mat-card-header>
+          </mat-card>
+          <mat-card (click)="gotoCnn()" class="p-0 suggestionCard mb-2 notMatStyle">
+            <mat-card-header>
+              <img class="suggestionAvatar" mat-card-avatar src="../../assets/imgs/thumbnail/cnn.png">
+              <mat-card-title class="usernameNavModal"><div class="overTextSuggestion">CNN</div></mat-card-title>
+              <mat-card-subtitle><div class="overTextSuggestion">This vehicle made in Tunisia is an economical and ecological option</div></mat-card-subtitle>
+              <mat-card-subtitle><div class="overTextSuggestion">18/03/2022</div></mat-card-subtitle>
+            </mat-card-header>
+          </mat-card>
+          <mat-card (click)="gotoAmazingWorld()" class="p-0 suggestionCard mb-2 notMatStyle">
+            <mat-card-header>
+              <button class="playButton d-flex align-items-center justify-content-center"><i class="ri-play-fill ri-lg"></i></button>
+              <img class="suggestionAvatar" mat-card-avatar src="../../assets/imgs/thumbnail/amazingWorld.png">
+              <mat-card-title class="usernameNavModal"><div class="overTextSuggestion">Amazing World</div></mat-card-title>
+              <mat-card-subtitle><div class="overTextSuggestion">This Tunisian electric car is powered by the sun : Three-wheeled electric car : Boubaker Siala</div></mat-card-subtitle>
+              <mat-card-subtitle><div class="overTextSuggestion">10/03/2022</div></mat-card-subtitle>
+            </mat-card-header>
+          </mat-card>
+          <mat-card (click)="gotoMosaique()" class="p-0 suggestionCard mb-2 notMatStyle">
+            <mat-card-header>
+              <button class="playButton d-flex align-items-center justify-content-center"><i class="ri-play-fill ri-lg"></i></button>
+              <img class="suggestionAvatar" mat-card-avatar src="../../assets/imgs/thumbnail/mosaique.png">
+              <mat-card-title class="usernameNavModal"><div class="overTextSuggestion">Mosaique</div></mat-card-title>
+              <mat-card-subtitle><div class="overTextSuggestion">Bako Motors : Première voiture tunisienne électrique  à la foire automobile de Munich.</div></mat-card-subtitle>
+              <mat-card-subtitle><div class="overTextSuggestion">10/09/2021</div></mat-card-subtitle>
+            </mat-card-header>
+          </mat-card>
+          <mat-card (click)="gotoCartage()" class="p-0 suggestionCard mb-2 notMatStyle">
+            <mat-card-header>
+              <button class="playButton d-flex align-items-center justify-content-center"><i class="ri-play-fill ri-lg"></i></button>
+              <img class="suggestionAvatar" mat-card-avatar src="../../assets/imgs/thumbnail/cartage.png">
+              <mat-card-title class="usernameNavModal"><div class="overTextSuggestion">Cartage +</div></mat-card-title>
+              <mat-card-subtitle><div class="overTextSuggestion">Intervention Boubaker Siala Directeur BAKO Motors.</div></mat-card-subtitle>
+              <mat-card-subtitle><div class="overTextSuggestion">15 févr. 2022</div></mat-card-subtitle>
+            </mat-card-header>
+          </mat-card>
+          <mat-card (click)="gotoExpressfm()" class="p-0 suggestionCard mb-2 notMatStyle">
+            <mat-card-header>
+              <img class="suggestionAvatar" mat-card-avatar src="../../assets/imgs/thumbnail/expressFm.png">
+              <mat-card-title class="usernameNavModal"><div class="overTextSuggestion">Express Fm</div></mat-card-title>
+              <mat-card-subtitle><div class="overTextSuggestion">Bako Motors transforms thermal vehicles into 100% electric vehicles</div></mat-card-subtitle>
+              <mat-card-subtitle><div class="overTextSuggestion">15/12/2021</div></mat-card-subtitle>
+            </mat-card-header>
+          </mat-card>
+          <mat-card (click)="gotoMaghrebVoices()" class="p-0 suggestionCard mb-2 notMatStyle">
+            <mat-card-header>
+              <button class="playButton d-flex align-items-center justify-content-center"><i class="ri-play-fill ri-lg"></i></button>
+              <img class="suggestionAvatar" mat-card-avatar src="../../assets/imgs/thumbnail/maghrebVoices.png">
+              <mat-card-title class="usernameNavModal"><div class="overTextSuggestion">Maghreb voices</div></mat-card-title>
+              <mat-card-subtitle><div class="overTextSuggestion">He returned to Tunisia and developed an environmentally friendly car powered by solar energy. Boubaker: All parts of the car are manufactured with Tunisian expertise</div></mat-card-subtitle>
+              <mat-card-subtitle><div class="overTextSuggestion">06/10/2021</div></mat-card-subtitle>
+            </mat-card-header>
+          </mat-card>
+          <mat-card (click)="gotoRtci()" class="p-0 suggestionCard mb-2 notMatStyle">
+            <mat-card-header>
+              <button class="playButton d-flex align-items-center justify-content-center"><i class="ri-play-fill ri-lg"></i></button>
+              <img class="suggestionAvatar" mat-card-avatar src="../../assets/imgs/thumbnail/rtci.png">
+              <mat-card-title class="usernameNavModal"><div class="overTextSuggestion">RTCI</div></mat-card-title>
+              <mat-card-subtitle><div class="overTextSuggestion">Bako motors on RTCI</div></mat-card-subtitle>
+              <mat-card-subtitle><div class="overTextSuggestion">14/12/2021</div></mat-card-subtitle>
+            </mat-card-header>
+          </mat-card>
+          <mat-card (click)="gotoWatania()" class="p-0 suggestionCard mb-2 notMatStyle">
+            <mat-card-header>
+              <button class="playButton d-flex align-items-center justify-content-center"><i class="ri-play-fill ri-lg"></i></button>
+              <img class="suggestionAvatar" mat-card-avatar src="../../assets/imgs/thumbnail/watania.png">
+              <mat-card-title class="usernameNavModal"><div class="overTextSuggestion">Watania 1</div></mat-card-title>
+              <mat-card-subtitle><div class="overTextSuggestion">The first Tunisian car with solar energy… Manufacturing and marketing</div></mat-card-subtitle>
+              <mat-card-subtitle><div class="overTextSuggestion">19/12/2021</div></mat-card-subtitle>
+            </mat-card-header>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!---------------CERTIFICATIONS------------------>
+  <div class="row mb-5" *ngIf="certif">
+    <div class="col-md-6 col-lg-6 col-xl-6 col-sm-12 d-flex justify-content-end">
+      <div class="desktop-and-tablet">
+        <div class="certifFrame">
+          <div class="certifRow">
+            <img class="certifImageStyle" src="../../assets/imgs/certifs/cert.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-6 padding-top-title col-xl-6 col-sm-12">
+      <h2>Emc seminar</h2>
+      <div class="col-12 mt-2"><div class="lineBlue"></div></div>
+      <div class="mobile-display width-100">
+        <div class="col-md-6 mb-3 col-lg-6 col-xl-6 col-sm-12 d-flex justify-content-end">
+          <div class="certifFrame">
+            <div class="certifRow">
+              <img class="certifImageStyle" src="../../assets/imgs/certifs/cert.png">
+            </div>
+          </div>
+        </div>
+      </div>
+      <p>
+        Delivered following the international seminar on EMC of automotive Electrical and Electronic Sub-Assemblies.
+      </p>
+    </div>
+  </div>
+  <div class="row mb-5" *ngIf="certif">
+    <div class="col-md-6 col-lg-6 col-xl-6 col-sm-12 d-flex justify-content-end">
+      <div class="desktop-and-tablet">
+        <div class="certifFrame">
+          <div class="certifRow">
+            <img class="certifImageStyle" src="../../assets/imgs/certifs/label.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-6 padding-top-title col-xl-6 col-sm-12">
+      <h2>Sartup Act</h2>
+      <div class="col-12 mt-2"><div class="lineBlue"></div></div>
+      <div class="mobile-display width-100">
+        <div class="col-md-6 mb-3 col-lg-6 col-xl-6 col-sm-12 d-flex justify-content-end">
+          <div class="certifFrame">
+            <div class="certifRow">
+              <img class="certifImageStyle" src="../../assets/imgs/certifs/label.png">
+            </div>
+          </div>
+        </div>
+      </div>
+      <p>
+        This title is awarded to innovative startups with high growth potential.
+      </p>
+    </div>
+  </div>
+
+  <!---------------PARTNERS------------------>
+  <div *ngIf="partner" class="row ">
+    <h2 align="center">Our partners</h2>
+    <div class="col-12 d-flex justify-content-center mt-2"><div class="lineBlue"></div></div>
+    <owl-carousel-o [options]="customOptions">
+      <ng-template carouselSlide>
+        <div class="partnerContent d-flex align-items-center">
+          <div class="col-12 d-flex justify-content-center"><img class="logoStyleBeta" src="../../assets/imgs/beta.png"></div>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="partnerContent d-flex align-items-center">
+          <div class="col-12 d-flex justify-content-center"><img class="logoStyle" src="../../assets/imgs/wevioo.png"></div>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="partnerContent d-flex align-items-center">
+          <div class="col-12 d-flex justify-content-center"><img class="logoStyle" src="../../assets/imgs/Jumia-Logo.png"></div>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="partnerContent d-flex align-items-center">
+          <div class="col-12 d-flex justify-content-center"><img class="logoStyle" src="../../assets/imgs/usaid.jpg"></div>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="partnerContent d-flex align-items-center">
+          <div class="col-12 d-flex justify-content-center"><img class="logoStyle" src="../../assets/imgs/berd.jpg"></div>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="partnerContent d-flex align-items-center">
+          <div class="col-12 d-flex justify-content-center"><img class="logoStyle" src="../../assets/imgs/giz.png"></div>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="partnerContent d-flex align-items-center">
+          <div class="col-12 d-flex justify-content-center"><img class="logoStyle" src="../../assets/imgs/logo_ZT.png"></div>
+        </div>
+      </ng-template>
+
+      <ng-template carouselSlide>
+        <div class="partnerContent">
+          <div class="col-12 d-flex justify-content-center"><img class="logoStyle" src="../../assets/imgs/tamkeen.png"></div>
+          <div class="col-12"><h5 align="center">Zitouna Tamkeen</h5></div>
+          <div class="col-12 text-center">
+            <p>this is a short description of our partner. You can click on to visit them.</p>
+          </div>
+        </div>
+      </ng-template>
+    </owl-carousel-o>
+  </div>
+</div>
+
+
+
+
+<!-------------------AWARDS----------------------->
+
+<footer class="backgroundGris footerMonte">
+  <app-footer></app-footer>
+</footer>
