@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 })
 export class CommandeService {
 
-  prefixe = "https://backend.bakomotors.com/mail";
+  prefixe = "http://localhost:9090/mail";
 
   constructor(private http:HttpClient) {
     

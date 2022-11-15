@@ -9,6 +9,8 @@ import {User} from '../../core/model/user';
 import {Order} from '../../core/model/order';
 import {Address} from '../../core/model/address';
 import { CommandeService } from 'src/app/services/commande.service';
+import { Contact } from 'src/app/core/model/contact';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-order',
@@ -40,29 +42,38 @@ export class CheckoutComponent implements OnInit {
 
   order?: Order;
 
-  constructor(private commandservice : CommandeService, private token: TokenStorageService,private cartService: CartService, private router: Router, private orderService: OrderService, private formBuilder: FormBuilder, private tokenStorage: TokenStorageService) {
+  constructor(private http:HttpClient,private commandservice : CommandeService, private token: TokenStorageService,private cartService: CartService, private router: Router, private orderService: OrderService, private formBuilder: FormBuilder, private tokenStorage: TokenStorageService) {
   }
   usermail? : string;
   usename? : string;
+  
   getusermail(){
   this.usermail =  this.token.getUser().email;
   }
+
   getusername(){
     this.usename = this.token.getUser().name;
   }
 
+ commande? : Contact;
+ headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
+ prefixe = "https://backend.bakomotors.com/mail";
+
   sendcommand(){
-    const commande = {
+  /// this.commandservice.sendCommande(this.commande!)
+  return this.http.post(this.prefixe, this.commande)
+  .subscribe(result => console.log(result));
+  }
+  
+  ngOnInit(): void {
+    this.commande = {
       "name" : "amine",
-      "email" : "amine.ghribi@bakomotors.com",
+      "email" : this.token.getUser().email,
       "subject" : "I wanna buy B10",
       "object" :""
     
-    }
-    console.log("commande" + commande.email);
-    this.commandservice.sendCommande(commande)
-  }
-  ngOnInit(): void {
+    };
     this.cartService.cartDataChanged$.subscribe(cart => this.cartData = cart);
     this.order = new Order(this.cartData.totalPrice!, this.cartData.orderProducts!, this.user.id!);
     this.getusermail();
