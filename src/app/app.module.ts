@@ -93,6 +93,7 @@ import {
  } from "igniteui-angular";
 import { NavDealerComponent } from './navbar-list/nav-dealer/nav-dealer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { GuestCheckoutComponent } from './guest-checkout/guest-checkout.component';
  
 @NgModule({
   declarations: [
@@ -117,6 +118,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     
     DealerComponent,
     SelfSaveDirective,
+    GuestCheckoutComponent,
 
     
     

@@ -3,6 +3,7 @@ import {CartService} from '../../core/services/cartService/cart.service';
 import {MatDialog} from '@angular/material/dialog';
 import {Router} from '@angular/router';
 import {Cart} from '../../core/model/cart';
+import { TokenStorageService } from 'src/app/core/services/tokenService/token-storage.service';
 
 @Component({
   selector: 'app-cart-dialog',
@@ -11,7 +12,7 @@ import {Cart} from '../../core/model/cart';
 })
 export class CartDialogComponent implements OnInit {
 
-  constructor(private cartService: CartService, private matDialog: MatDialog, private router: Router) {
+  constructor(private token: TokenStorageService, private cartService: CartService, private matDialog: MatDialog, private router: Router) {
   }
 
     cart: Cart = {
@@ -24,6 +25,16 @@ export class CartDialogComponent implements OnInit {
     this.cart = this.cartService.getCartData();
     this.cartService.cartDataChanged$.subscribe(cart => this.cart = cart);
 
+  }
+  usermail? : string;
+  usename? : string;
+  
+  getusermail(){
+  this.usermail =  this.token.getUser().email;
+  }
+  
+  getusername(){
+    this.usename = this.token.getUser().name;
   }
   increase(food: any): void{
     this.cartService.increaseQuantity(food);
@@ -42,6 +53,11 @@ export class CartDialogComponent implements OnInit {
   }
   openCheckout(): void {
     this.closeDialog();
-    this.router.navigate(['/checkout']);
+    if (this.token.isAuthenticated()){
+      this.router.navigate(['/checkout']);
+
+    }else {
+      this.router.navigate(['/guestcheckout']);
+    }
   }
 }

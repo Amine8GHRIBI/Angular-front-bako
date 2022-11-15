@@ -3,7 +3,6 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
 
-const AUTH_API = 'https://backend.bakomotors.com/';
 
 @Injectable({
   providedIn: 'root'

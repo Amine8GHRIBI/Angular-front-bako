@@ -3,6 +3,6 @@ export class Contact {
     name?: string;
     email?: string;
     subject?:string;
-    object?:string;
+    content?:string;
  
 }

@@ -106,7 +106,7 @@ techForm = this.formBuilder.group({
   }
 
   ngOnInit(): void {
-    this.getusermail();
+    //this.getusermail();
     this.getAllProducts();
     this.getAllCategories();
     this.cartService.cartDataChanged$.subscribe(cartData => this.cartData = cartData );

@@ -54,38 +54,36 @@
 <app-nav-home></app-nav-home>
 
 <body>
-  <h3 class="text-center p-1">Checkout</h3>
+  <h3 class="text-center p-1">Guest Checkout</h3>
   <div class="container mb-4">
+    <form [formGroup]="reactiveForm" (ngSubmit)="sendcommand()">
+
       <div class="row pt-2 pb-4">
           <div class="col-lg-8">
-              <form action="#">
                   <div class="row pt-4">
                       <div class="col-lg-6 pl-0">
-
-
+                    <div class="form-group">
+                     <input type="text" class="form-control" name="name" id="name" [formControl]="name" placeholder="Enter name" required>
+  </div>
                           <div class="form-group">
 
-                              <input type="text" class="form-control" placeholder="Enter name" required>
-                          </div>
-                          <div class="form-group">
-
-                              <input type="email" class="form-control" placeholder="Enter email" required>
+                              <input type="email" class="form-control" [formControl]="email" placeholder="Enter email" required>
                           </div>
 
                           <div class="form-group">
 
-                              <textarea class="form-control" rows="5" placeholder="Enter Address" id="Address"
+                              <textarea class="form-control" rows="5" [formControl]="adress" placeholder="Enter Address" id="Address"
                                   required></textarea>
                           </div>
                           <div class="form-group">
 
-                              <input type="text" class="form-control" placeholder="Enter city" required>
+                              <input type="text" class="form-control"[formControl]="phone" placeholder="Enter Phone Number" required>
                           </div>
                           <div class="row">
                               <div class="col-lg-6 pl-0">
                                   <div class="form-group">
 
-                                      <input type="text" class="form-control" placeholder="Enter State" required>
+                                      <input type="text" class="form-control" name="state" placeholder="Enter State" required>
                                   </div>
                               </div>
                               <div class="col-lg-6 pr-0 mob-pl-0">
@@ -126,7 +124,6 @@
                           </div>
                       </div>
                   </div>
-                  </form>
           </div>
           <div class="col-lg-4 pt-1" *ngFor="let item of cartData.orderProducts">
               <div class="row pt-4">
@@ -160,19 +157,20 @@
               </div>
               <div class="row pb-5 pt-4">
                   <div class="col-12">
-                      <div class="form-group form-check">
+                      <!--<div class="form-group form-check">
                           <label class="form-check-label">
                               <input class="form-check-input" type="checkbox"> Shipping address same as
                               billing
                           </label>
-                      </div>
+                      </div>-->
                       <button type="submit" disabled class="btn btn-primary w-100">Complate Payment (Coming Soon)</button>
-                      <button  class="btn btn-primary w-100" (click)="sendcommand()">Pre-order </button>
+                      <button type="submit" class="btn btn-primary w-100" >Pre-order </button>
 
                   </div>
               </div>
           </div>
       </div>
+    </form>
 
   </div>
 </body>

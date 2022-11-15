@@ -2,8 +2,9 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Order} from '../../model/order';
 import {Observable} from 'rxjs';
+import { environment } from 'src/environments/environment.prod';
 
-const URL = 'https://backend.bakomotors.com/order';
+const URL = environment.API_URL + '/order';
 
 
 @Injectable({

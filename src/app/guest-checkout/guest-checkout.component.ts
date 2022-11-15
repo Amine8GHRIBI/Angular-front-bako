@@ -1,24 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import {CartService} from '../../core/services/cartService/cart.service';
-import {Cart} from '../../core/model/cart';
 import {Router} from '@angular/router';
-import {OrderService} from '../../core/services/orderService/order.service';
-import {FormBuilder} from '@angular/forms';
-import {TokenStorageService} from '../../core/services/tokenService/token-storage.service';
-import {User} from '../../core/model/user';
-import {Order} from '../../core/model/order';
-import {Address} from '../../core/model/address';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+
 import { CommandeService } from 'src/app/services/commande.service';
 import { Contact } from 'src/app/core/model/contact';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment.prod';
+import { User } from '../core/model/user';
+import { Order } from '../core/model/order';
+import { TokenStorageService } from '../core/services/tokenService/token-storage.service';
+import { CartService } from '../core/services/cartService/cart.service';
+import { OrderService } from '../core/services/orderService/order.service';
+import { Cart } from '../core/model/cart';
+import { Address } from '../core/model/address';
 
 @Component({
   selector: 'app-order',
-  templateUrl: './checkout.component.html',
-  styleUrls: ['./checkout.component.css']
+  templateUrl: './guest-checkout.component.html',
+  styleUrls: ['./guest-checkout.component.css']
 })
-export class CheckoutComponent implements OnInit {
+export class GuestCheckoutComponent  implements OnInit {
 
   cartData: Cart = {
     orderProducts: [] ,
@@ -28,7 +29,7 @@ export class CheckoutComponent implements OnInit {
   
   displayedColumns: string[] = [ 'usermail','name', 'quantity', 'price'];
   dataSource = this.cartData.orderProducts;
-
+/*
   address: Address = {
   id: this.tokenStorage.getUser().address?.id,
   street: this.tokenStorage.getUser().address?.street,
@@ -39,7 +40,7 @@ export class CheckoutComponent implements OnInit {
       id: this.tokenStorage.getUser().id,
       email: this.tokenStorage.getUser().email,
       address: this?.address
-  };
+  };*/
 
   order?: Order;
 
@@ -47,6 +48,20 @@ export class CheckoutComponent implements OnInit {
   }
   usermail? : string;
   usename? : string;
+  reactiveForm = new FormGroup({
+    firstname: new FormControl(),
+    adress: new FormControl(),
+    email: new FormControl(),
+  })
+
+  name = new FormControl('');
+  email = new FormControl('');
+  phone = new FormControl('');
+  adress = new FormControl('');
+
+
+
+
   
   getusermail(){
   this.usermail =  this.token.getUser().email;
@@ -62,23 +77,25 @@ export class CheckoutComponent implements OnInit {
  prefixe = environment.API_URL + "/mail";
 
   sendcommand(){
+    console.log(this.name.value)
+    this.commande = {
+      "name" : this.name.value!,
+      "email" : this.email.value!,
+      "subject" : "I wanna buy B10 and my adress is " + this.adress.value!,
+      "content" :"phone number " + this.phone.value!,
+
+    
+    };
   /// this.commandservice.sendCommande(this.commande!)
   return this.http.post(this.prefixe, this.commande)
   .subscribe(result => console.log(result));
   }
   
   ngOnInit(): void {
-    console.log("username" + this.token.getUser().email);
-    this.commande = {
-      "name" : "amine",
-      "email" : this.token.getUser().email,
-      "subject" : "I wanna buy B10",
-      "content" :""
     
-    };
     this.cartService.cartDataChanged$.subscribe(cart => this.cartData = cart);
-    this.order = new Order(this.cartData.totalPrice!, this.cartData.orderProducts!, this.user.id!);
-    this.getusermail();
+    ////this.order = new Order(this.cartData.totalPrice!, this.cartData.orderProducts!, this.user.id!);
+   // this.getusermail();
   }
 
   placeOrder(){

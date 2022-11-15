@@ -1,3 +1,4 @@
+import { GuestCheckoutComponent } from './guest-checkout/guest-checkout.component';
 import { DealerComponent } from './dealer/dealer.component';
 import { ClientMenuComponent } from './menu/client-menu/client-menu.component';
 import { RegisteruserComponent } from './registeruser/registeruser.component';
@@ -22,6 +23,8 @@ const routes: Routes = [
   { path: 'order', component: OrderComponent,
   canActivate: [AuthGuardService] 
 },
+{ path: 'orderguest', component: OrderComponent },
+
   { path: 'news', component: NewsSpaceComponent },
   { path: 'tech', component: TechComponent },
   { path: 'login', component: LoginuserComponent},
@@ -29,7 +32,8 @@ const routes: Routes = [
   {path: 'checkout', component: CheckoutComponent},
   {path: 'chekout', component: ChekoutComponent},
   {path: 'clientmenu', component: ClientMenuComponent},
-  {path:'dealer',component:DealerComponent}
+  {path:'dealer',component:DealerComponent},
+  {path : 'guestcheckout', component:GuestCheckoutComponent}
 ];
 
 @NgModule({

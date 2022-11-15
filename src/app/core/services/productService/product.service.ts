@@ -1,10 +1,10 @@
-import { environment } from './../../../../environments/environment';
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Product} from '../../model/product';
+import { environment } from 'src/environments/environment.prod';
 
-const URL = "https://backend.bakomotors.com/products";
+const URL =  environment.API_URL +"/products";
 
 @Injectable({
   providedIn: 'root'
