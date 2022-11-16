@@ -40,53 +40,60 @@
   <br>
 
   <br>
-  <div style="margin-top:-35px"class="videoAccueilFrame d-flex justify-content-center position-relative d-flex align-items-center">
+  <div style="margin-top:-45px"class="videoAccueilFrame d-flex justify-content-center position-relative d-flex align-items-center">
+    <mdb-carousel [controls]="true" [indicators]="true" [animation]="'fade'">
+      <mdb-carousel-item>
+        <img
+          src="../../assets/imgs/rendering/bakoHome.png"
+          class="d-block w-100"
+          alt="..."
+        />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>OVER 200 MILLE RANGE</h5>
+        </div>
+      </mdb-carousel-item>
+      <mdb-carousel-item>
+        <img
+          src="../../assets/sef.png"
+          class="d-block w-100"
+          alt="..."
+        />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>YOUR URBAN LAST MILLE SOLUTION</h5>
+        </div>
+      </mdb-carousel-item>
+      <mdb-carousel-item>
+        <img
+          src="../../assets/imgs/gallery/90.png"
+          class="d-block w-100"
+          alt="..."
+        />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>OVER 200 MILLE RANGE</h5>
+        </div>
+      </mdb-carousel-item>
+    </mdb-carousel>
 
-  <mdb-carousel [controls]="true" [indicators]="true" [dark]="true">
-    <mdb-carousel-item>
-      <img
-        src="../../assets/imgs/rendering/bakoHome.png"
-        class="d-block w-100"
-        alt="..."
-      />
-     
-    </mdb-carousel-item>
-    <mdb-carousel-item>
-      <img
-        src="../../assets/sef.png"
-        class="d-block w-100"
-        alt="..."
-      />
-      
-    </mdb-carousel-item>
-    <mdb-carousel-item>
-      <img
-        src="../../assets/imgs/gallery/90.png"
-        class="d-block w-100"
-        alt="..."
-      />
-      
-    </mdb-carousel-item>  
-  </mdb-carousel>
 
   
   </div>
 
-  <div class="row position-absolute arrow-direction">
-    <div class="col-12 d-flex justify-content-center">
-      <div class="arrowAnimation"><i class="ri-arrow-down-s-line ri-3x"></i></div>
-    </div>
-  </div>
-  <table class="bottomRight">
-    <tr>
-      <td><i class="ri-map-pin-fill ri-lg"></i></td>
-      <td><h3 class="textShadow">Tunisia, Germany</h3></td>
-    </tr>
-    <tr>
-      <td colspan="2" class="font-size-12 textShadow">Hello world ! Bako Motors is a German-Tunisian startup that develops and manufactures solar electric vehicles. Combining both solar and electrical power, we have created something different: <br><b>A car charging itself</b> <br><b> We aim to make sustainable mobility affordable for all.</b></td>
-    </tr>
-  </table>
+ 
 </div>
+<div class="row position-absolute arrow-direction">
+  <div class="col-12 d-flex justify-content-center">
+    <div class="arrowAnimation"><i class="ri-arrow-down-s-line ri-3x"></i></div>
+  </div>
+</div>
+<table class="bottomRight">
+  <tr>
+    <td><i class="ri-map-pin-fill ri-lg"></i></td>
+    <td><h3 class="textShadow">Tunisia, Germany</h3></td>
+  </tr>
+  <tr>
+    <td colspan="2" class="font-size-12 textShadow">Hello world ! Bako Motors is a German-Tunisian startup that develops and manufactures solar electric vehicles. Combining both solar and electrical power, we have created something different: <br><b>A car charging itself</b> <br><b> We aim to make sustainable mobility affordable for all.</b></td>
+  </tr>
+</table>
 
   <!--------------------MOBILE NAVBAR STYLE--------------------->
   <div class="mobile-display backgroundGris mobileHead">
@@ -125,6 +132,8 @@
           class="d-block w-100"
           alt="..."
         />
+        <h5>Your Urban last mille</h5>
+
        
       </mdb-carousel-item>
       <mdb-carousel-item>
@@ -133,6 +142,7 @@
           class="d-block w-100"
           alt="..."
         />
+        <h5>Over 200 Mille Range</h5>
         
       </mdb-carousel-item>
       <mdb-carousel-item>
