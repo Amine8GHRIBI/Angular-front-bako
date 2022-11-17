@@ -2,6 +2,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { Router, RouterModule } from '@angular/router';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +11,7 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
 })
 export class HomeComponent implements OnInit {
+
 
   ngOnInit(): void {
   }
@@ -45,7 +47,7 @@ export class HomeComponent implements OnInit {
 
         images = [700, 800, 807].map((n) => `https://picsum.photos/id/${n}/900/500`);
 
-        constructor(config: NgbCarouselConfig) {
+        constructor(config: NgbCarouselConfig ,private sanitizer: DomSanitizer) {
           // customize default values of carousels used by this component tree
           config.interval = 2000;
           config.keyboard = true;
@@ -80,5 +82,9 @@ export class HomeComponent implements OnInit {
         },
         nav: false
       };
+
+      transform(url : string ) {
+        return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+      }
 
 }

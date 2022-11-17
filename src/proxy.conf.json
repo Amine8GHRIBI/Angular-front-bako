@@ -1,0 +1,57 @@
+{
+    "/api": {
+    "target": "https://backend.bakomotors.com",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+    },
+    "/categories": {
+      "target": "https://backend.bakomotors.com",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true
+      },
+    "/configuration": {
+      "target": "https://backend.bakomotors.com",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true
+      },
+      "/mail": {
+        "target": "https://backend.bakomotors.com",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true
+        },
+        "/orders": {
+          "target": "https://backend.bakomotors.com",
+          "secure": false,
+          "logLevel": "debug",
+          "changeOrigin": true
+          },
+          "/orderProduct": {
+            "target": "https://backend.bakomotors.com",
+            "secure": false,
+            "logLevel": "debug",
+            "changeOrigin": true
+            },
+            "/products": {
+              "target": "https://backend.bakomotors.com",
+              "secure": false,
+              "logLevel": "debug",
+              "changeOrigin": true
+              },
+              "/login": {
+                "target": "https://backend.bakomotors.com",
+                "secure": false,
+                "logLevel": "debug",
+                "changeOrigin": true
+                },
+                "/register": {
+                  "target": "https://backend.bakomotors.com",
+                  "secure": false,
+                  "logLevel": "debug",
+                  "changeOrigin": true
+                  }
+  }
+  

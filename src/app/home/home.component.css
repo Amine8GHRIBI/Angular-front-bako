@@ -4,7 +4,9 @@
  height:auto;
  position:static !important;
 }
-
+.mobile-display{
+  margin-top:-24vh;  
+}
 .videoAccueilFrame{
 min-height:calc(100vh - 0px);
 max-height:calc(100vh - 0px);
@@ -21,10 +23,10 @@ margin-top:-14vh;
 
 .bottomRight{
   position: absolute;
-  right:23vw;
-  top:230vh;
+  right:1vw;
+  top:75vh;
   width: 25vw;
-  color:white;
+  color: rgb(216, 148, 65);
 }
 
 .font-size-12{
@@ -803,3 +805,18 @@ ngb-carousel {
 .carousel-indicators{
   z-index: 20;
 }
+
+.centered {
+  position: absolute;
+  top: 40%;
+  left: 64%;
+  width: 70%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: rgb(12, 11, 11);
+}
+
